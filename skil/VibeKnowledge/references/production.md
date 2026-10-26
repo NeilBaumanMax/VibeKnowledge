@@ -1,91 +1,120 @@
-# 审批、实现与交付
+# 独立制作流程与工程契约
 
-## 命令与版本状态
+`<skill>` 指复制/解压后的技能目录，`<project>` 指任意新项目目录。所有命令不依赖当前工作目录。运行时不读取原视频工程，也不要求安装其他技能。
 
-以下 `<skill>` 是本SKILL.md所在目录，`<project>` 是本期视频项目；命令路径必须按当前机器解析，不能复用旧作品中的 `/Users/neil/...` 路径。脚本只使用Python标准库；媒体处理需FFmpeg/FFprobe，渲染需Node.js 22+与HyperFrames。
+## 三阶段命令
+
+初始化并恢复项目自己的工具链：
 
 ```bash
-python3 <skill>/scripts/workflow.py init <project> --topic '本期主题'
+python3 <skill>/scripts/workflow.py init <project> --topic '主题'
+python3 <skill>/scripts/engine.py setup <project>
+python3 <skill>/scripts/engine.py doctor <project>
 ```
 
-写完 `docs/script.md` 和 `docs/sources.md`，展示给用户并等回复。**下面批准命令中的原话只能来自用户实际回复，示例不是授权：**
+先写 `docs/script.md` 和 `docs/sources.md`，展示脚本等待用户批准。只有收到真实批准，才能记录原话；下面的占位原话不是授权：
 
 ```bash
-python3 <skill>/scripts/workflow.py approve-script <project> --quote '实际脚本批准原话'
-python3 <skill>/scripts/workflow.py check <project> --stage preview
-python3 <skill>/scripts/prepare_bgm.py <project> --stage preview --duration 30 --ffmpeg <ffmpeg>
+python3 <skill>/scripts/workflow.py approve-script <project> --quote '真实脚本批准原话'
 ```
 
-开始写本期场景代码。输出30秒后，做Review并记录实际文件；工具调用FFprobe验证1920×1080、30fps、900帧、音频和时长，不会仅根据扩展名认定视频有效：
+编写本期的 `film/src/config.json`、`captions.json`、`scenes.js`，完成后将config.ready设为true。然后：
 
 ```bash
-python3 <skill>/scripts/workflow.py record-preview <project> --video output/preview/v1.mp4 --review review/preview-v1.md --ffprobe <ffprobe>
+python3 <skill>/scripts/engine.py build <project> --stage preview
+python3 <skill>/scripts/engine.py check <project> --stage preview
+python3 <skill>/scripts/engine.py snapshot <project> --stage preview
+python3 <skill>/scripts/engine.py preview <project> --stage preview
+python3 <skill>/scripts/engine.py render <project> --stage preview --output output/preview/v1.mp4
 ```
 
-展示样片，等待用户批准。若用户提修改要求，修改并重新渲染、Review、record-preview；不能视作通过。只在批准最终样片后：
+render自动生成配乐、HTML、SRT/CSV，运行框架检查，再渲染30秒，最后做视频规格/全片解码/抽帧/响度检查。它不会把技术检查自动算成人类理解通过。看实际帧、必要时看动态序列，写 `review/preview-v1.md`，记录：
 
 ```bash
-python3 <skill>/scripts/workflow.py approve-preview <project> --quote '实际样片批准原话'
+python3 <skill>/scripts/workflow.py record-preview <project> --video output/preview/v1.mp4 --review review/preview-v1.md
+```
+
+workflow会自动定位本项目安装的FFprobe；需要自定义时才使用 `--ffprobe`，不必配置系统PATH。
+
+展示样片，用户要求修改就修改样片，不生成全片。用户明确通过最终样片后：
+
+```bash
+python3 <skill>/scripts/workflow.py approve-preview <project> --quote '真实样片批准原话'
 python3 <skill>/scripts/workflow.py check <project> --stage full
-python3 <skill>/scripts/prepare_bgm.py <project> --stage full --duration 78 --ffmpeg <ffmpeg>
 ```
 
-完成全片及Review：
+扩展已批准内容，保持前段画面和语义，完成后：
 
 ```bash
-python3 <skill>/scripts/workflow.py record-full <project> --video output/full/v1.mp4 --review review/full-v1.md --duration 78 --ffprobe <ffprobe>
+python3 <skill>/scripts/engine.py check <project> --stage full
+python3 <skill>/scripts/engine.py snapshot <project> --stage full --at 17.5,29.5,41,55,70,77
+python3 <skill>/scripts/engine.py render <project> --stage full --output output/full/v1.mp4
+python3 <skill>/scripts/workflow.py record-full <project> --video output/full/v1.mp4 --review review/full-v1.md --duration 78
 ```
 
-脚本和来源文件的哈希共同定义脚本版本；样片视频和Review哈希共同定义样片版本。批准后有改动会使下一阶段检查失败。保留版本化输出，不在同一路径悄悄替换已批准样片。批准原话是可审计记录，脚本不能验证话语是否真实，操作者仍须遵守用户审核要求。
+上面时间与duration按已批准片长调整。render拒绝覆盖已有成片，修订用v2等新路径。单独复检可用 `engine.py verify <project> --stage full --output output/full/v1.mp4`。只更改BGM处理时也可单独调用 `prepare_bgm.py`。
 
-## 本期项目组织
+## 文件与配置
 
 ```
-docs/script.md, sources.md
-workflow.json
-assets/audio/千年之后_氛围版.ogg, music-cues.json
-film/src/config.json, captions.json, styles.css, scenes/*.js, timeline.js
-film/assets/audio/score-preview.wav, score-full.wav
-film/assets/fonts/, vendor/
-film/index.html
-tools/build.mjs
-output/preview/, full/
-review/
+package.json, package-lock.json    本项目的固定依赖版本
+workflow.json                    真实批准与版本摘要
+runtime.json                     当前输出阶段/时长（构建时生成）
+docs/script.md, sources.md        待审脚本及事实依据
+assets/audio/                    固定源音乐与起音数据
+film/src/config.json              标题/片长/场景安排
+film/src/captions.json            独立字幕数据
+film/src/styles.css              字体、排版、色彩、遮罩
+film/src/motion.js                确定性粒子、短标签、通用图元
+film/src/scenes.js                本期知识推理场景
+film/src/timeline.js              主时间轴及逐字上滑
+film/assets/fonts/               完整中文字体与许可证
+film/assets/audio/               本阶段预处理音乐
+film/assets/vendor/              构建时从锁定GSAP复制
+film/index.html                  本地可渲染HTML
+output/preview/, output/full/    MP4与SRT
+review/                          检查、帧图、响度、审核记录
 ```
 
-把文案与场景时间、颜色含义、字幕分词和场景代码分开。明确主时间轴和画面变化的来源；改词不要要求改一堆坐标。原理场景针对新主题重写，不能保留幸存者偏差的飞机或标签。
+`config.json` 示例（时序只供说明，具体按批准脚本写）：
 
-`assets/reference-project/` 保存前作的源码和构建脚本，供提取已验证的算法（点的持续运动、逐字遮罩、连续窗口、对象透明度）。它不是开箱即渲染的成片工程：未重复打包本机字体、GSAP依赖、生成HTML和音轨。其旧 `config.json` 与 `build.mjs` 含特定题目和旧路径；采用时必须改标题、标签、输出路径、场景和字体资源。不要直接运行原例子并冒充新主题视频。
-
-字体选择当前可用且适合项目的中文字体，以本地woff2随**本期项目**固定；检查新主题所有字形，不能复制只覆盖旧字幕的字体子集。不要假定另一台机器有苹方或Arial。可使用许可明确的开源中文字体。GSAP安装固定版本并保留其许可证信息；参考作品版本3.14.2。
-
-## HyperFrames核心契约
-
-当前参考渲染器为0.8.186；在本期 `package.json` 固定实际采用版本，按可用HyperFrames技能检查更新后再用，不静默改变已批准片的渲染版本。
-
-- 根元素包含 `data-composition-id="main"`、`data-start="0"`、`data-duration`、`data-width="1920"`、`data-height="1080"`、`data-fps="30"`。
-- 每个计时视觉段用 `.clip`，注明 `data-start`、`data-duration`；在内层节点做动画，不能对clip的visibility/display做补丁。
-- 注册 `window.__timelines.main = gsap.timeline({paused:true})`。用主时间驱动Canvas，每次seek能重画同一帧；不依赖播放积累，不使用实时随机、Date.now或网络资源。
-- 音频元素有唯一id、项目内src、`data-start="0"`及duration，交给框架控制。不要靠浏览器autoplay同步。
-- 中文每字独立遮罩；字幕完整时间与图形观察时间分别检查。GSAP从下方位移，避免CSS transform与GSAP同时控制同一位置。
-- `prepare_bgm.py`产生的是本期时长的音轨，full不能继续引用preview WAV。预览首30秒与full首30秒应保持视觉一致，允许按已批准计划移除样片临时结束动作。
-- 环境依赖、缓存和临时输出写在工作区内；不要打包另一机器的绝对路径软链接。
-
-示例命令在本期 `film/` 中执行（版本以本期固定版本为准）：
-
-```bash
-npx --yes hyperframes@0.8.186 check --json
-npx --yes hyperframes@0.8.186 snapshot --at 1.6,2.8,7.6,16.6,17.5,22,26.8,29.5 --output ../review/frames
-npx --yes hyperframes@0.8.186 preview --background
-npx --yes hyperframes@0.8.186 render --quality delivery --fps 30 --workers 1 --output ../output/preview/v1.mp4
+```json
+{
+  "title": "本期主题",
+  "fullDuration": 78,
+  "conceptTime": 17,
+  "ready": true,
+  "scenes": [
+    {"id":"opening","start":0,"end":4,"mode":"population","count":480,"selected":12,
+     "labels":[{"text":"本期定义的对象","x":140,"y":450,"size":38}]},
+    {"id":"attention","start":4,"end":8,"mode":"focus","count":480,"selected":12,
+     "labels":[{"text":"被纳入观察的对象","x":1060,"y":438}]}
+  ]
+}
 ```
 
-仅在当前阶段已通过相应用户审核时渲染；样片阶段内修错重渲染不另设审批。内存较小的机器先用单worker。渲染完成必须确认实际输出路径、时长和退出码；有问题看日志修复，不仅提供代码。
+`population`与`focus`是可选图元，不是所有主题的固定视觉。它们的连续粒子使用稳定ID；要跨场景保持动作连贯，就在本期scenes.js中连接位置和镜头，不能生硬换两套点。新类型在 `customScene(ctx,time,scene,config)` 中绘制并返回true；默认未知mode抛错，避免无声空白。
+
+`captions.json` 是数组，每项如下：
+
+```json
+{"id":"concept","start":17,"end":20,"kind":"reveal","lines":["本期概念"],"lineDelays":[0],"english":"CONCEPT","emphasis":[],"readingHold":false}
+```
+
+kind支持hook/top/reveal/ending，按CSS扩展；id使用小写英文开头、字母数字下划线或连字符。lines每行单独遮罩错峰；lineDelays相对于该字幕开始；每行读取时间应计算最后一字落位后剩余时间。readingHold只能用于确实需要阅读的长停顿。
+
+源码允许先规划完整78秒字幕；preview构建器只截取前30秒，full使用fullDuration。相同音乐起点，full重新从原OGG处理，绝不拼接已经淡出的preview音轨。生成的SRT会反映逐行出现时间，而不是把尚未出现的第二行提前显示。
+
+## 本地引擎契约
+
+骨架已经实现：根data-composition-id为main，1920×1080/30fps；每个clip带起止时间；字幕在内层做变换；根GSAP时间轴paused注册在 `window.__timelines.main`；Canvas从时间直接计算，支持seek；字体加载后再挂载；audio有唯一id并由框架同步。
+
+修改时保留这些契约。不要使用Date.now、未设种子的随机或运行时网络。子绘制函数将透明度乘入父级，避免退出时残影。字体完整随包，不依赖系统苹方，也不使用只覆盖旧题目字形的子集。
+
+工程锁定HyperFrames 0.8.186、GSAP 3.14.2；FFprobe由npm按平台安装，FFmpeg由项目内的imageio-ffmpeg 0.6.0提供。可按实际需要升级，但升级后须重新检查和抽帧，不能悄悄改掉已批准视频的渲染环境。
 
 ## 验证与交付
 
-自动检查无error后，人工读取关键帧并检查运动序列；保留warning原文及处理依据。FFprobe检查规格，FFmpeg完整解码；检查音画卡点、30秒衔接、末尾淡出和音乐是否为固定源。原例子的 `tools/validate_output.py` 可适配复用，Python依赖numpy/Pillow。
+检查错误必须解决；warning另列，不靠省略报告或标记data-hold掩盖问题。看开场、17秒附近、每个推理反转与转场、30秒衔接、结尾。除静帧外，比较相隔半秒的位置和字幕遮罩状态。宽高、帧数和全片解码由engine.verify检查。
 
-Review表格每项写“通过/失败/待复核、依据、修复情况”。不把编译、画面、知识理解混成一个数字；曾经失败的理解性反馈不能抹掉。修复后重检受影响镜头。阶段交付包含MP4、字幕SRT、源码路径、按顺序的脚本/分镜和Review。
-
-完整片最后一句回应开头疑问；留有足够阅读时间，不为卡点切断推理。提出事实边界时用清楚短句，避免只留下反直觉结论。没有发布授权时交付本地文件，不发布到视频平台。
+Review每项列通过/失败/待复核、证据、修复。第一次观看理解必须由真实反馈验证；脚本或技术测试不等于观众看懂。交付实际MP4、SRT、完整脚本/分镜、源码和Review。未授权发布时不向社交平台上传。

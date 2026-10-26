@@ -1,0 +1,29 @@
+{
+  "archive_verification": "pass",
+  "initialization_from_cwd_root": "pass",
+  "record_full_without_explicit_ffprobe": "pass",
+  "workflow_state": "complete",
+  "preview": {
+    "duration": 30.0,
+    "frames": 900,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30
+  },
+  "full": {
+    "duration": 78.0,
+    "frames": 2340,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30
+  },
+  "original_directories_blocked": [
+    "film",
+    "tools",
+    ".venv",
+    "output",
+    "skil"
+  ],
+  "platform": "macOS arm64",
+  "note": "Synthetic test fixtures; not real user approval."
+}

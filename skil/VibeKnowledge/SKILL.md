@@ -5,7 +5,9 @@ description: 制作或修改 VibeKnowledge 风格的中文知识可视化短视�
 
 # VibeKnowledge
 
-显示名称和文件夹保持 `VibeKnowledge`，标准调用标识为 `$vibe-knowledge`。目标是让普通观众通过动画理解知识；沿用 HyperFrames + 确定性 Canvas/SVG + GSAP，不把当前主题套成同一套粒子模板。
+这是独立技能包：只复制本文件夹即可使用，不需要原仓库、原视频、本机字体、旧虚拟环境或其他技能。显示名称和文件夹保持 `VibeKnowledge`，标准调用标识为 `$vibe-knowledge`。目标是让普通观众通过动画理解知识；沿用 HyperFrames + 确定性 Canvas/SVG + GSAP，不把不同主题套成同一套粒子模板。
+
+首次使用阅读 [安装与独立使用](references/installation.md)。系统只需Python 3.10+、Node.js 22+（含npm）；首次安装运行依赖需要网络，音乐和完整中文字体已经随包提供。环境依赖不等于依赖原工作区。
 
 ## 必须执行的三阶段
 
@@ -31,8 +33,10 @@ description: 制作或修改 VibeKnowledge 风格的中文知识可视化短视�
 
 ## 资源与执行入口
 
-- 用 `python3 <skill>/scripts/workflow.py init <工作区/videos/主题> --topic '主题'` 建立脚本阶段目录和音乐副本。目标目录必须不存在。
+- 用 `python3 <skill>/scripts/workflow.py init <任意目标目录> --topic '主题'` 建立完整的独立项目骨架、字体和音乐副本。目标目录必须不存在；默认放在用户当前工作区下。
 - 按当前阶段阅读对应参考，不要一次加载所有例子。
-- 制作时若已安装 HyperFrames 系列技能，读取相关技术契约；缺少时按 [制作流程](references/production.md) 中的本地契约和当前CLI文档执行，不依赖特定机器的绝对路径。
-- [幸存者偏差脚本实例](references/survivorship-example.md) 与 `assets/reference-project/` 保存已完成作品的模块化实现，供研究字幕、流动样本和连续转场。**这是特定主题的源码参考，不是换标题就能发布的模板。** 飞机、Wald、成功/失败配色含义不能硬套到无关主题。
+- `scripts/engine.py` 提供setup、doctor、build、check、snapshot、preview、render和verify；所有工具和项目路径动态解析，具体命令见 [制作流程](references/production.md)。不调用任何外部工作区的脚本。
+- `assets/starter/` 是完整可构建的工程骨架，含锁定依赖、构建器、逐字字幕、连续运动库、场景扩展口与SRT/CSV输出。`assets/fonts/` 提供完整Noto Sans SC及许可证；`assets/audio/` 提供固定OGG及卡点数据。
+- 每期都须按批准脚本编写 `config.json`、`captions.json` 和 `scenes.js`，完成后设置 `config.ready=true`。空骨架会拒绝构建，不能用测试动画冒充知识视频。
+- [幸存者偏差脚本实例](references/survivorship-example.md) 仅供叙事参考；新主题不自动使用飞机、Wald或成功/失败配色含义。
 - 脚本阶段的回复以脚本为主；样片/完整版阶段的回复以可播放视频和Review为主。每次请求审核时指出这是用户指定的阶段要求，并链接当前待审文件。

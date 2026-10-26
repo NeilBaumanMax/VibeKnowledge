@@ -1,0 +1,7 @@
+(version 1)
+(allow default)
+(deny file-read* (subpath "/Users/neil/Documents/Project/Vibe_Knowledge/film"))
+(deny file-read* (subpath "/Users/neil/Documents/Project/Vibe_Knowledge/tools"))
+(deny file-read* (subpath "/Users/neil/Documents/Project/Vibe_Knowledge/.venv"))
+(deny file-read* (subpath "/Users/neil/Documents/Project/Vibe_Knowledge/output"))
+(deny file-read* (subpath "/Users/neil/Documents/Project/Vibe_Knowledge/skil"))

@@ -109,8 +109,16 @@ def main():
         source = SKILL / manifest['path']
         if digest(source) != manifest['sha256']:
             parser.error('技能内BGM校验失败')
-        for folder in ['docs', 'assets/audio', 'film/src', 'output/preview', 'output/full', 'review']:
+        shutil.copytree(SKILL / 'assets/starter', project, ignore=shutil.ignore_patterns('node_modules', '.cache', '__pycache__'))
+        for folder in ['docs', 'assets/audio', 'film/src', 'film/assets/fonts', 'output/preview', 'output/full', 'review']:
             (project / folder).mkdir(parents=True, exist_ok=True)
+        for font in (SKILL / 'assets/fonts').iterdir():
+            if font.is_file():
+                shutil.copy2(font, project / 'film/assets/fonts' / font.name)
+        config_path = project / 'film/src/config.json'
+        config = json.loads(config_path.read_text())
+        config['title'] = args.topic
+        write_json(config_path, config)
         source_target = project / 'assets/audio/千年之后_氛围版.ogg'
         shutil.copy2(source, source_target)
         shutil.copy2(SKILL / 'assets/audio/full-cues.json', project / 'assets/audio/music-cues.json')
@@ -156,7 +164,11 @@ def main():
         review = inside(project, args.review)
         if not review.read_text().strip():
             parser.error('Review不能为空')
-        metadata = probe_video(video, args.ffprobe, expected)
+        media_probe = args.ffprobe
+        if not media_probe and (project / 'node_modules').exists():
+            from engine import dependencies
+            media_probe = dependencies(project)[0]['ffprobe']
+        metadata = probe_video(video, media_probe, expected)
         state[stage] = {'video': str(video.relative_to(project)), 'review': str(review.relative_to(project)),
                         'video_sha256': digest(video), 'review_sha256': digest(review),
                         'script_sha256': script_hash(project), 'metadata': metadata, 'at': now()}

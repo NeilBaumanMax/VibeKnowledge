@@ -52,3 +52,11 @@ node tools/review_full.mjs
 克隆后在macOS arm64环境执行 `./tools/bootstrap.sh` 恢复Python和Node依赖。FFmpeg启动器根据当前工作区定位虚拟环境，不再依赖原机器绝对路径；随仓库的FFprobe是macOS arm64版本，其他系统请用本平台可执行文件替换 `tools/bin/ffprobe`。技能本身的流程脚本只需Python标准库，媒体步骤使用显式传入或PATH中的FFmpeg/FFprobe。
 
 验证说明：[技能封装验收](docs/13_VibeKnowledge技能验收.md)。
+
+## 独立技能包（2026-10-26修订）
+
+**只需 [dist/VibeKnowledge.zip](dist/VibeKnowledge.zip)，无需克隆本仓库或保留原工作区。** 解压后把整个文件夹放入目标助手的技能目录，或直接让助手读取其中的SKILL.md。它包含通用工程模板、音乐、完整中文字体、锁定依赖、初始化/构建/渲染/验证脚本和审核门槛。
+
+系统需Python 3.10+与Node.js 22+；首次setup联网恢复本期自己的工具链。其他素材均在包内，不依赖旧的虚拟环境、系统中文字体、原成片或额外技能。详见 [独立安装说明](skil/VibeKnowledge/references/installation.md) 与 [独立性验证](docs/14_VibeKnowledge独立性验证.md)。
+
+之前仅包含说明和原作品参考的封装已替换为可运行骨架。macOS arm64已实际完成隔离渲染；其他平台有安装分支，但不声称已实测。

@@ -4,4 +4,4 @@
 
 每期使用 skill 内的《千年之后（氛围版）》实际OGG文件。此流程适用于视频制作，不把脚本/样片审批扩展成普通文档、代码维护或仓库同步的额外审批。
 
-现有 `film/` 是《幸存者偏差》完整作品；`skil/VibeKnowledge/assets/reference-project/` 是技术参考，不要在新主题中原样复制旧内容。
+现有 `film/` 是《幸存者偏差》完整作品；独立skill的 `assets/starter/` 是通用工程骨架；只复制整个skill文件夹也能在其他工作区使用。

@@ -1,0 +1,130 @@
+{
+  "format": 1,
+  "name": "VibeKnowledge",
+  "files": {
+    "SKILL.md": {
+      "sha256": "6bc458bd58f980b9a77eae08d57473b9891e928c4a19fe3a728fdc485f871869",
+      "bytes": 5507
+    },
+    "agents/openai.yaml": {
+      "sha256": "f126c8aa4bd893bde63c8ca01b15ae8fffc6b4ed1f5c83281378d77041df8f89",
+      "bytes": 304
+    },
+    "assets/audio/full-cues.json": {
+      "sha256": "61119b9631545d0ed1fb47ba2c9e10c6763a83af2edb746da4d40914b8f60f79",
+      "bytes": 2664
+    },
+    "assets/audio/manifest.json": {
+      "sha256": "a84e117c7ad7a731ff84508eeb94071d1bc0b6216a9c22298f9080f2b8adac6a",
+      "bytes": 765
+    },
+    "assets/audio/sample-cues.json": {
+      "sha256": "2ea700afba81b46eff8092f38f42ecc8801b8b2c4ed92fb019dfad3286a0699c",
+      "bytes": 3154
+    },
+    "assets/audio/千年之后_氛围版.ogg": {
+      "sha256": "4223d2706afcada65b5b51c2b7c0ed276c77ba908fc5e31daadc63072ed1ce92",
+      "bytes": 20363166
+    },
+    "assets/fonts/NotoSansSC.ttf": {
+      "sha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da",
+      "bytes": 17772300
+    },
+    "assets/fonts/OFL.txt": {
+      "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
+      "bytes": 4388
+    },
+    "assets/fonts/manifest.json": {
+      "sha256": "d9cb6a0df6ebf2d24dd47e8590cfaa3a952d55297fccc3160f919ce94f06d0a6",
+      "bytes": 406
+    },
+    "assets/starter/.gitignore": {
+      "sha256": "882a6314512110899b99b85d97ef330ab48e58d214d189cdf17d862e30f7d2d0",
+      "bytes": 150
+    },
+    "assets/starter/film/src/captions.json": {
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    "assets/starter/film/src/config.json": {
+      "sha256": "7306c44af7f6408cb195764567f27432c96462c895aa1e23b8fc496b091cd077",
+      "bytes": 95
+    },
+    "assets/starter/film/src/motion.js": {
+      "sha256": "edd2ecef60e46d9033a15f66ddb1ca232e84fb4dfe7dabb88cff2a4338c2fa15",
+      "bytes": 2273
+    },
+    "assets/starter/film/src/scenes.js": {
+      "sha256": "477951218315ba6af32e238a28fe1fc387113e5448e0e269d78ccd319b94c177",
+      "bytes": 475
+    },
+    "assets/starter/film/src/styles.css": {
+      "sha256": "39dea265b9c0c78f41062299358d3bf9f4f5f53c98a393c1771f4fa75574e0b2",
+      "bytes": 1165
+    },
+    "assets/starter/film/src/timeline.js": {
+      "sha256": "916081ec82ab96c6e3d9833b0f0c75a9f47d87bd9755b929bfbad7fecbd8ebdf",
+      "bytes": 1796
+    },
+    "assets/starter/package-lock.json": {
+      "sha256": "b4f52e120463759c76927092f054ee7ce997e24b103f9c8e10cff34d16610356",
+      "bytes": 67362
+    },
+    "assets/starter/package.json": {
+      "sha256": "2a4a13f336555f449da7755ae9b083a3ef104733cbfb9be4f5638b1a154174a5",
+      "bytes": 311
+    },
+    "assets/starter/tools/build.mjs": {
+      "sha256": "394915573c0698e04b525caf37299b7d0cd3bd27715c3842223c9d3be6cadebe",
+      "bytes": 4474
+    },
+    "references/installation.md": {
+      "sha256": "af992abec24fcda7bbe3c368bea5a2bbeb6ded7d29d466e7629145d77c4e849b",
+      "bytes": 2987
+    },
+    "references/music.md": {
+      "sha256": "551226113f03fb75110292ec15a39e15dcbd8134d9658961a722ee5aa2203b5f",
+      "bytes": 2050
+    },
+    "references/production.md": {
+      "sha256": "e46dc45a1d80886919ee05f5bca8855e5aca15a68b6bad52321da0ba6155d37f",
+      "bytes": 6948
+    },
+    "references/script.md": {
+      "sha256": "a07eaea4582842c4344f99af9777c8086fc408823689fb0c5596bb9b2a79a794",
+      "bytes": 2382
+    },
+    "references/survivorship-example.md": {
+      "sha256": "2a966d8015cba87c083476d7ccf0c4c0e7ae30b45389093edfc3a2fdb3de4fab",
+      "bytes": 1879
+    },
+    "references/validation.md": {
+      "sha256": "e44077bc03541e9e3bf2762efd3cc639c829c1eaaa38570a384a0279af900d95",
+      "bytes": 2030
+    },
+    "references/visual.md": {
+      "sha256": "fbea110261fc319ccc03fb5c777638b1483ea39afa6a0565d4c6da60b57a4008",
+      "bytes": 3000
+    },
+    "scripts/engine.py": {
+      "sha256": "35850cb35313e459a5005624ccb8681737996e1441bc94cf789a609cc1e6c645",
+      "bytes": 8132
+    },
+    "scripts/package_skill.py": {
+      "sha256": "ce39bf951883ba82d05406f624f5bc62149549f45289f5a162adc3c5ec042753",
+      "bytes": 2412
+    },
+    "scripts/prepare_bgm.py": {
+      "sha256": "a4e24df25ce54284e10a27a10530379986d44a6a68340e246ce60a8c5f0c2647",
+      "bytes": 2169
+    },
+    "scripts/test_workflow.py": {
+      "sha256": "ba0ec23e2cd019c2859208c8f1c1fc3decd741d7b3990eb09a714a054f19d702",
+      "bytes": 4062
+    },
+    "scripts/workflow.py": {
+      "sha256": "644279bed7da1d62ac0eac3634d8e65360a7518df224f05af9318b141f9040d2",
+      "bytes": 9699
+    }
+  }
+}

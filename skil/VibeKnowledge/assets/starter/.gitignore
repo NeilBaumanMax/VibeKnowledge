@@ -1,0 +1,8 @@
+node_modules/
+.runtime/
+.cache/
+review/tmp/
+film/.hyperframes/
+__pycache__/
+.DS_Store
+# Keep source BGM, fonts, code, docs, checks and output videos.

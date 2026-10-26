@@ -4,6 +4,7 @@ import argparse
 import json
 from pathlib import Path
 import tempfile
+import shutil
 import unittest
 from workflow import SKILL, digest, write_json, script_hash, require
 
@@ -14,9 +15,9 @@ class Gates(unittest.TestCase):
         (self.project / 'docs').mkdir()
         (self.project / 'docs/script.md').write_text('测试夹具：脚本内容')
         (self.project / 'docs/sources.md').write_text('测试夹具：资料来源')
-        # Hardlink only for reading; tests never modify source audio.
+        # Copy so relocated skills and test folders can live on different volumes.
         source = SKILL / 'assets/audio/千年之后_氛围版.ogg'
-        (self.project / 'bgm.ogg').hardlink_to(source)
+        shutil.copyfile(source, self.project / 'bgm.ogg')
         self.state = {'bgm': {'path': 'bgm.ogg', 'sha256': digest(source)}}
 
     def tearDown(self):

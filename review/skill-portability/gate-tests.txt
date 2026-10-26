@@ -1,0 +1,14 @@
+test_changed_bgm_rejected (__main__.Gates.test_changed_bgm_rejected) ... ok
+test_changed_preview_invalidates_approval (__main__.Gates.test_changed_preview_invalidates_approval) ... ok
+test_changed_review_invalidates_approval (__main__.Gates.test_changed_review_invalidates_approval) ... ok
+test_current_preview_allows_full (__main__.Gates.test_current_preview_allows_full) ... ok
+test_current_script_allows_preview (__main__.Gates.test_current_script_allows_preview) ... ok
+test_edited_script_invalidates_approval (__main__.Gates.test_edited_script_invalidates_approval) ... ok
+test_edited_sources_invalidates_approval (__main__.Gates.test_edited_sources_invalidates_approval) ... ok
+test_full_blocked_without_preview_approval (__main__.Gates.test_full_blocked_without_preview_approval) ... ok
+test_preview_blocked_without_approval (__main__.Gates.test_preview_blocked_without_approval) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.503s
+
+OK

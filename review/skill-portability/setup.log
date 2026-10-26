@@ -1,0 +1,17 @@
+
+added 77 packages in 2s
+npm warn allow-scripts 2 packages have install scripts not yet covered by allowScripts:
+npm warn allow-scripts   @ffprobe-installer/darwin-arm64@5.0.1 (postinstall: chmod u+x ffprobe)
+npm warn allow-scripts   esbuild@0.25.12 (postinstall: node install.js)
+npm warn allow-scripts
+npm warn allow-scripts Run `npm approve-scripts --allow-scripts-pending` to review, or `npm approve-scripts <pkg>` to allow.
+Collecting imageio-ffmpeg==0.6.0
+  Downloading imageio_ffmpeg-0.6.0-py3-none-macosx_11_0_arm64.whl.metadata (1.5 kB)
+Downloading imageio_ffmpeg-0.6.0-py3-none-macosx_11_0_arm64.whl (21.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 21.1/21.1 MB 1.5 MB/s  0:00:13
+Installing collected packages: imageio-ffmpeg
+Successfully installed imageio-ffmpeg-0.6.0
+
+[notice] A new release of pip is available: 26.0.1 -> 26.2.2
+[notice] To update, run: /Users/neil/Documents/Project/Vibe_Knowledge/review/skill-portability/detached/standalone-film/.runtime/python/bin/python -m pip install --upgrade pip
+依赖已就绪；没有读取原作品、系统字体或原工作区工具。
