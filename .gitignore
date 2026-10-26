@@ -15,7 +15,7 @@ tools/ffprobe-native/__MACOSX/
 .env.*
 !.env.example
 # Keep source music, generated scores, output videos, review frames and documents.
-# In particular, skil/VibeKnowledge/assets/audio/*.ogg must be committed as bytes.
+# In particular, skill/VibeKnowledge/assets/audio/*.ogg must be committed as bytes.
 
 review/skill-portability/detached/
 review/skill-portability/extracted/

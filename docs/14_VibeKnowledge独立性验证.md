@@ -13,7 +13,7 @@
 
 ## 实测证据
 
-只把skill复制到 `review/skill-portability/detached/`，再从它生成独立项目。`deny-original.sb`禁止测试进程读取原工作区的film、tools、.venv、output、skil目录；直接读取原工程被拒绝，证明限制生效。
+只把skill复制到 `review/skill-portability/detached/`，再从它生成独立项目。`deny-original.sb`禁止测试进程读取原工作区的film、tools、.venv、output、当时名为skil的目录（现已更名为skill）；直接读取原工程被拒绝，证明限制生效。
 
 隔离进程完成30秒样片与78秒完整版渲染，分别900/2340帧；两者均为1920×1080、30fps、H.264、AAC双声道，全片解码通过。详见：
 

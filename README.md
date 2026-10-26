@@ -43,7 +43,7 @@ node tools/review_full.mjs
 
 ## 可复用 Skill：VibeKnowledge
 
-技能入口：[skil/VibeKnowledge/SKILL.md](skil/VibeKnowledge/SKILL.md)。每次提供主题后，先生成完整脚本供审核；脚本通过才制作30秒样片，样片通过才制作完整版。工作区的 `AGENTS.md` 指向该流程；可直接说“用 VibeKnowledge，主题是……”。标准技能标识是 `$vibe-knowledge`，显示名和文件夹按要求保留 `VibeKnowledge`。
+技能入口：[skill/VibeKnowledge/SKILL.md](skill/VibeKnowledge/SKILL.md)。每次提供主题后，先生成完整脚本供审核；脚本通过才制作30秒样片，样片通过才制作完整版。工作区的 `AGENTS.md` 指向该流程；可直接说“用 VibeKnowledge，主题是……”。标准技能标识是 `$vibe-knowledge`，显示名和文件夹按要求保留 `VibeKnowledge`。
 
 固定BGM的实际OGG文件、SHA-256和节奏数据已包含在技能文件夹中，来源已与2026-10-26提供的Music目录文件核对一致。新项目放在 `videos/<主题>/`，不会覆盖当前作品。技能并未额外安装到用户全局目录；在其他工作区使用时，提供SKILL.md路径，或按当地技能安装方式安装整个文件夹。
 
@@ -57,6 +57,6 @@ node tools/review_full.mjs
 
 **只需 [dist/VibeKnowledge.zip](dist/VibeKnowledge.zip)，无需克隆本仓库或保留原工作区。** 解压后把整个文件夹放入目标助手的技能目录，或直接让助手读取其中的SKILL.md。它包含通用工程模板、音乐、完整中文字体、锁定依赖、初始化/构建/渲染/验证脚本和审核门槛。
 
-系统需Python 3.10+与Node.js 22+；首次setup联网恢复本期自己的工具链。其他素材均在包内，不依赖旧的虚拟环境、系统中文字体、原成片或额外技能。详见 [独立安装说明](skil/VibeKnowledge/references/installation.md) 与 [独立性验证](docs/14_VibeKnowledge独立性验证.md)。
+系统需Python 3.10+与Node.js 22+；首次setup联网恢复本期自己的工具链。其他素材均在包内，不依赖旧的虚拟环境、系统中文字体、原成片或额外技能。详见 [独立安装说明](skill/VibeKnowledge/references/installation.md) 与 [独立性验证](docs/14_VibeKnowledge独立性验证.md)。
 
 之前仅包含说明和原作品参考的封装已替换为可运行骨架。macOS arm64已实际完成隔离渲染；其他平台有安装分支，但不声称已实测。

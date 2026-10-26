@@ -1,12 +1,12 @@
 # VibeKnowledge 技能封装与仓库交付
 
-2026-10-26。技能位于 `skil/VibeKnowledge/`，未擅自安装到全局技能目录。显示名称/目录为VibeKnowledge，标准调用标识为 `vibe-knowledge`。工作区根 `AGENTS.md` 指向技能，因此下次在本工作区给出新知识主题时会进入该流程。
+2026-10-26。技能位于 `skill/VibeKnowledge/`，未擅自安装到全局技能目录。显示名称/目录为VibeKnowledge，标准调用标识为 `vibe-knowledge`。工作区根 `AGENTS.md` 指向技能，因此下次在本工作区给出新知识主题时会进入该流程。
 
 ## 已封装
 
 - 三阶段：先交完整脚本；用户通过后制作30秒样片；样片通过后制作完整版。普通修改请求和没有回复均不等于通过。
 - 版本记录：脚本与来源共同计算摘要；样片和Review各有摘要。修改已批准内容使下一阶段检查失效。批准原话只可记录真实用户回复。
-- 固定BGM：实际音频 `skil/VibeKnowledge/assets/audio/千年之后_氛围版.ogg`，20,363,166字节；带音乐清单、SHA-256、已测起音数据和30秒/全片预处理脚本。
+- 固定BGM：实际音频 `skill/VibeKnowledge/assets/audio/千年之后_氛围版.ogg`，20,363,166字节；带音乐清单、SHA-256、已测起音数据和30秒/全片预处理脚本。
 - 2026-10-26用户新提供的Music目录文件，与工程和技能副本逐字节校验一致。运行不依赖Music或Downloads目录。
 - 黑金视觉、逐字下方上滑、连续运动、对象含义、知识因果、阅读时间、事实核查和Review规范。
 - 旧作品源码作为案例参考，不把二战飞机或幸存者偏差内容硬套到其他主题。
@@ -22,7 +22,7 @@
 证据：`review/skill-validation/integration-test.json` 与 `package-validation.json`。复现单元测试：
 
 ```bash
-python3 skil/VibeKnowledge/scripts/test_workflow.py --workdir review/skill-validation/tmp
+python3 skill/VibeKnowledge/scripts/test_workflow.py --workdir review/skill-validation/tmp
 ```
 
 限制：这验证了本地流程、素材、参数和版本失效逻辑，不代表所有未来主题都能一次达到内容/画面质量要求。首次观看理解效果仍需实际观众反馈；代理不得伪造批准原话来通过脚本门槛。
