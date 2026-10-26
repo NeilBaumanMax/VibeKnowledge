@@ -1,0 +1,4 @@
+interface:
+  display_name: "VibeKnowledge"
+  short_description: "固定BGM知识可视化：先审脚本，再审30秒样片，最后制作完整版"
+  default_prompt: "使用 $vibe-knowledge 为我给出的主题先制作脚本，等我通过后再生成30秒样片，样片通过后制作完整版。"

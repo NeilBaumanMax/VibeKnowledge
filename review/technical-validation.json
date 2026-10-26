@@ -1,0 +1,97 @@
+{
+  "passed": true,
+  "duration": 30.0,
+  "width": 1920,
+  "height": 1080,
+  "frames": 900,
+  "fps": "30/1",
+  "video_codec": "h264",
+  "pixel_format": "yuv420p",
+  "audio_codec": "aac",
+  "audio_channels": 2,
+  "audio_sample_rate": "48000",
+  "size_bytes": 10612169,
+  "full_decode": "pass",
+  "sampled_frames": [
+    {
+      "time": 0,
+      "mean": 19.567069508744854,
+      "bright_pixels": 42765
+    },
+    {
+      "time": 1,
+      "mean": 19.158973283179012,
+      "bright_pixels": 42800
+    },
+    {
+      "time": 2.7,
+      "mean": 22.08203671553498,
+      "bright_pixels": 71742
+    },
+    {
+      "time": 5.2,
+      "mean": 18.375114133230454,
+      "bright_pixels": 37596
+    },
+    {
+      "time": 7.1,
+      "mean": 17.315303497942388,
+      "bright_pixels": 22385
+    },
+    {
+      "time": 10.8,
+      "mean": 17.264007040895063,
+      "bright_pixels": 21403
+    },
+    {
+      "time": 13.2,
+      "mean": 17.630707465277776,
+      "bright_pixels": 27734
+    },
+    {
+      "time": 16.6,
+      "mean": 8.148864936985596,
+      "bright_pixels": 0
+    },
+    {
+      "time": 17,
+      "mean": 47.86408018261317,
+      "bright_pixels": 80121
+    },
+    {
+      "time": 17.4,
+      "mean": 19.95700987011317,
+      "bright_pixels": 64127
+    },
+    {
+      "time": 19.8,
+      "mean": 17.74560362011317,
+      "bright_pixels": 35482
+    },
+    {
+      "time": 22.8,
+      "mean": 18.203416280864197,
+      "bright_pixels": 30325
+    },
+    {
+      "time": 24.8,
+      "mean": 18.527162422839506,
+      "bright_pixels": 34026
+    },
+    {
+      "time": 26.3,
+      "mean": 18.76883326903292,
+      "bright_pixels": 34771
+    },
+    {
+      "time": 28.8,
+      "mean": 19.10878938400206,
+      "bright_pixels": 39221
+    },
+    {
+      "time": 29.9666667,
+      "mean": 19.17154256687243,
+      "bright_pixels": 39966
+    }
+  ]
+}

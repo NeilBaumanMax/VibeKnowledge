@@ -1,0 +1,26 @@
+{
+  "ok": true,
+  "outputDir": "/Users/neil/Documents/Project/Vibe_Knowledge/review/v4/final-proof",
+  "frames": [
+    {
+      "path": "/Users/neil/Documents/Project/Vibe_Knowledge/review/v4/final-proof/frame-00-at-2.8s.png",
+      "time": 2.8
+    },
+    {
+      "path": "/Users/neil/Documents/Project/Vibe_Knowledge/review/v4/final-proof/frame-01-at-14.8s.png",
+      "time": 14.8
+    },
+    {
+      "path": "/Users/neil/Documents/Project/Vibe_Knowledge/review/v4/final-proof/frame-02-at-29.1s.png",
+      "time": 29.1
+    }
+  ],
+  "contactSheets": [
+    "/Users/neil/Documents/Project/Vibe_Knowledge/review/v4/final-proof/contact-sheet.jpg"
+  ],
+  "_meta": {
+    "version": "0.8.186",
+    "latestVersion": "0.8.186",
+    "updateAvailable": false
+  }
+}

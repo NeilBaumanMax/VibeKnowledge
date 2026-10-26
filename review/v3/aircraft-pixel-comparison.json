@@ -1,0 +1,14 @@
+[
+  {
+    "frame": "12_22.000.png",
+    "aircraft_area_mae": 0.3218119900932401,
+    "threshold": 3,
+    "passed": true
+  },
+  {
+    "frame": "15_26.800.png",
+    "aircraft_area_mae": 0.1340625,
+    "threshold": 3,
+    "passed": true
+  }
+]

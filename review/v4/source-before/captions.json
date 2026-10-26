@@ -1,0 +1,13 @@
+[
+{"id":"hook","start":0,"end":4,"kind":"hook","lines":["你看到的成功"],"lineDelays":[0]},
+{"id":"reverse","start":2,"end":4,"kind":"reverse","lines":["其实筛掉了无数失败"],"lineDelays":[0]},
+{"id":"question","start":4,"end":7.3,"kind":"lower","lines":["为什么成功经验","常常会误导你？"],"lineDelays":[0,0.4]},
+{"id":"incomplete","start":7.3,"end":11.3,"kind":"lower","lines":["因为你看到的……","从来不是全部"],"lineDelays":[0,1.7]},
+{"id":"method","start":11.3,"end":13.7,"kind":"top","lines":["同样尝试，也有人失败"],"lineDelays":[0]},
+{"id":"inference","start":13.7,"end":16.2,"kind":"top","lines":["但你只听到了成功"],"lineDelays":[0]},
+{"id":"reveal","start":17,"end":19.5,"kind":"reveal","lines":["幸存者偏差"],"lineDelays":[0],"english":"SURVIVORSHIP BIAS"},
+{"id":"aircraft","start":19.5,"end":22.3,"kind":"top","lines":["二战：只统计返航飞机"],"lineDelays":[0]},
+{"id":"wrong","start":22.3,"end":24.8,"kind":"top","lines":["弹孔多，就先加固？"],"lineDelays":[0]},
+{"id":"consequence","start":24.8,"end":27.4,"kind":"top","lines":["关键部位中弹，可能难以返航"],"lineDelays":[0.15]},
+{"id":"conclusion","start":27.4,"end":30,"kind":"top","lines":["只看幸存者，就漏掉了全貌"],"lineDelays":[0]}
+]

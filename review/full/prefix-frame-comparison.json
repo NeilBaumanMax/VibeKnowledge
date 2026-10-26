@@ -1,0 +1,22 @@
+[
+  {
+    "frame": "01_1.600.png",
+    "meanAbsPixelDifference": 0.0
+  },
+  {
+    "frame": "07_14.800.png",
+    "meanAbsPixelDifference": 0.0
+  },
+  {
+    "frame": "10_17.500.png",
+    "meanAbsPixelDifference": 0.0
+  },
+  {
+    "frame": "12_22.000.png",
+    "meanAbsPixelDifference": 0.0
+  },
+  {
+    "frame": "15_26.800.png",
+    "meanAbsPixelDifference": 0.020169270833333332
+  }
+]

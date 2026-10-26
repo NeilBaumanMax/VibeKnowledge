@@ -1,0 +1,83 @@
+{
+  "ok": true,
+  "outputDir": "/Users/neil/Documents/Project/Vibe_Knowledge/review/full/frames",
+  "frames": [
+    {
+      "path": "/Users/neil/Documents/Project/Vibe_Knowledge/review/full/frames/frame-00-at-27s.png",
+      "time": 27
+    },
+    {
+      "path": "/Users/neil/Documents/Project/Vibe_Knowledge/review/full/frames/frame-01-at-29s.png",
+      "time": 29
+    },
+    {
+      "path": "/Users/neil/Documents/Project/Vibe_Knowledge/review/full/frames/frame-02-at-31.5s.png",
+      "time": 31.5
+    },
+    {
+      "path": "/Users/neil/Documents/Project/Vibe_Knowledge/review/full/frames/frame-03-at-35.5s.png",
+      "time": 35.5
+    },
+    {
+      "path": "/Users/neil/Documents/Project/Vibe_Knowledge/review/full/frames/frame-04-at-39s.png",
+      "time": 39
+    },
+    {
+      "path": "/Users/neil/Documents/Project/Vibe_Knowledge/review/full/frames/frame-05-at-42.5s.png",
+      "time": 42.5
+    },
+    {
+      "path": "/Users/neil/Documents/Project/Vibe_Knowledge/review/full/frames/frame-06-at-46s.png",
+      "time": 46
+    },
+    {
+      "path": "/Users/neil/Documents/Project/Vibe_Knowledge/review/full/frames/frame-07-at-50s.png",
+      "time": 50
+    },
+    {
+      "path": "/Users/neil/Documents/Project/Vibe_Knowledge/review/full/frames/frame-08-at-54s.png",
+      "time": 54
+    },
+    {
+      "path": "/Users/neil/Documents/Project/Vibe_Knowledge/review/full/frames/frame-09-at-57s.png",
+      "time": 57
+    },
+    {
+      "path": "/Users/neil/Documents/Project/Vibe_Knowledge/review/full/frames/frame-10-at-60.5s.png",
+      "time": 60.5
+    },
+    {
+      "path": "/Users/neil/Documents/Project/Vibe_Knowledge/review/full/frames/frame-11-at-64s.png",
+      "time": 64
+    },
+    {
+      "path": "/Users/neil/Documents/Project/Vibe_Knowledge/review/full/frames/frame-12-at-67s.png",
+      "time": 67
+    },
+    {
+      "path": "/Users/neil/Documents/Project/Vibe_Knowledge/review/full/frames/frame-13-at-70s.png",
+      "time": 70
+    },
+    {
+      "path": "/Users/neil/Documents/Project/Vibe_Knowledge/review/full/frames/frame-14-at-73.5s.png",
+      "time": 73.5
+    },
+    {
+      "path": "/Users/neil/Documents/Project/Vibe_Knowledge/review/full/frames/frame-15-at-77s.png",
+      "time": 77
+    },
+    {
+      "path": "/Users/neil/Documents/Project/Vibe_Knowledge/review/full/frames/frame-16-at-75.66s.png",
+      "time": 75.66
+    }
+  ],
+  "contactSheets": [
+    "/Users/neil/Documents/Project/Vibe_Knowledge/review/full/frames/contact-sheet-1.jpg",
+    "/Users/neil/Documents/Project/Vibe_Knowledge/review/full/frames/contact-sheet-2.jpg"
+  ],
+  "_meta": {
+    "version": "0.8.186",
+    "latestVersion": "0.8.186",
+    "updateAvailable": false
+  }
+}

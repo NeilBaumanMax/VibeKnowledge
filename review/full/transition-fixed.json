@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "outputDir": "/Users/neil/Documents/Project/Vibe_Knowledge/review/full/transition-fixed",
+  "frames": [
+    {
+      "path": "/Users/neil/Documents/Project/Vibe_Knowledge/review/full/transition-fixed/frame-00-at-42.5s.png",
+      "time": 42.5
+    },
+    {
+      "path": "/Users/neil/Documents/Project/Vibe_Knowledge/review/full/transition-fixed/frame-01-at-75.66s.png",
+      "time": 75.66
+    }
+  ],
+  "contactSheets": [
+    "/Users/neil/Documents/Project/Vibe_Knowledge/review/full/transition-fixed/contact-sheet.jpg"
+  ],
+  "_meta": {
+    "version": "0.8.186",
+    "latestVersion": "0.8.186",
+    "updateAvailable": false
+  }
+}

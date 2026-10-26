@@ -1,0 +1,394 @@
+{
+  "project": "film",
+  "runtime": "all",
+  "compositions": [
+    {
+      "composition": "index.html",
+      "source": "index.html",
+      "tweens": [
+        {
+          "id": "proxy (unresolved DOM association)-to-0-other",
+          "target": "proxy (unresolved DOM association)",
+          "method": "to",
+          "group": "other",
+          "start": 0,
+          "duration": 30,
+          "end": 30,
+          "totalDuration": 30,
+          "position": 0,
+          "ease": "none",
+          "unresolved": [
+            "endpointProperties"
+          ],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 0,
+              "properties": {}
+            },
+            {
+              "pct": 100,
+              "time": 30,
+              "properties": {
+                "t": 30
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "# .caption p:nth-child()-set-0",
+          "target": "# .caption p:nth-child()",
+          "method": "set",
+          "start": 0,
+          "duration": 0,
+          "end": 0,
+          "totalDuration": 0,
+          "position": 0,
+          "unresolved": [],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 100,
+              "time": 0,
+              "properties": {
+                "opacity": 1,
+                "y": 0
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "# .caption p:nth-child()-set-__raw:at-visual",
+          "target": "# .caption p:nth-child()",
+          "method": "set",
+          "group": "visual",
+          "start": null,
+          "duration": 0,
+          "end": null,
+          "totalDuration": 0,
+          "position": "__raw:at",
+          "unresolved": [
+            "start"
+          ],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 100,
+              "time": null,
+              "properties": {
+                "opacity": 1
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "# .caption p:nth-child()-fromTo-__raw:at-scale",
+          "target": "# .caption p:nth-child()",
+          "method": "fromTo",
+          "group": "scale",
+          "start": null,
+          "duration": 0.3,
+          "end": null,
+          "totalDuration": 0.3,
+          "position": "__raw:at",
+          "ease": "power4.out",
+          "unresolved": [
+            "start"
+          ],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": null,
+              "properties": {
+                "scale": 1.08
+              }
+            },
+            {
+              "pct": 100,
+              "time": null,
+              "properties": {
+                "scale": 1
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "# .caption p:nth-child()-fromTo-__raw:at",
+          "target": "# .caption p:nth-child()",
+          "method": "fromTo",
+          "start": null,
+          "duration": 0.32,
+          "end": null,
+          "totalDuration": 0.32,
+          "position": "__raw:at",
+          "ease": "power2.out",
+          "unresolved": [
+            "start"
+          ],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": null,
+              "properties": {
+                "opacity": 0,
+                "y": 16
+              }
+            },
+            {
+              "pct": 100,
+              "time": null,
+              "properties": {
+                "opacity": 1,
+                "y": 0
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "__unresolved__-to-__raw:cap.start+.1-visual",
+          "target": "__unresolved__",
+          "method": "to",
+          "group": "visual",
+          "start": null,
+          "duration": 0.35,
+          "end": null,
+          "totalDuration": 0.35,
+          "position": "__raw:cap.start+.1",
+          "unresolved": [
+            "start",
+            "target",
+            "endpointProperties"
+          ],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": null,
+              "properties": {}
+            },
+            {
+              "pct": 100,
+              "time": null,
+              "properties": {
+                "opacity": 1
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "# .caption-to-__raw:cap.end-.16-visual",
+          "target": "# .caption",
+          "method": "to",
+          "group": "visual",
+          "start": null,
+          "duration": 0.16,
+          "end": null,
+          "totalDuration": 0.16,
+          "position": "__raw:cap.end-.16",
+          "ease": "power2.in",
+          "unresolved": [
+            "start",
+            "endpointProperties"
+          ],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": null,
+              "properties": {}
+            },
+            {
+              "pct": 100,
+              "time": null,
+              "properties": {
+                "opacity": 0
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "#tag1,#tag2,#tag3-fromTo-4250",
+          "target": "#tag1,#tag2,#tag3",
+          "method": "fromTo",
+          "start": 4.25,
+          "duration": 0.35,
+          "end": 4.94,
+          "totalDuration": 0.69,
+          "position": 4.25,
+          "unresolved": [],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 4.25,
+              "properties": {
+                "opacity": 0,
+                "y": 12
+              }
+            },
+            {
+              "pct": 100,
+              "time": 4.6,
+              "properties": {
+                "opacity": 1,
+                "y": 0
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "#tag1,#tag2,#tag3-to-6950-visual",
+          "target": "#tag1,#tag2,#tag3",
+          "method": "to",
+          "group": "visual",
+          "start": 6.95,
+          "duration": 0.3,
+          "end": 7.25,
+          "totalDuration": 0.3,
+          "position": 6.95,
+          "unresolved": [],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 6.95,
+              "properties": {
+                "opacity": 1
+              }
+            },
+            {
+              "pct": 100,
+              "time": 7.25,
+              "properties": {
+                "opacity": 0
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "#flash-fromTo-17000-visual",
+          "target": "#flash",
+          "method": "fromTo",
+          "group": "visual",
+          "start": 17,
+          "duration": 0.24,
+          "end": 17.24,
+          "totalDuration": 0.24,
+          "position": 17,
+          "ease": "power2.out",
+          "unresolved": [],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 17,
+              "properties": {
+                "opacity": 0.1
+              }
+            },
+            {
+              "pct": 100,
+              "time": 17.24,
+              "properties": {
+                "opacity": 0
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "#returnedLabel,#illustrationNote-to-20650-visual",
+          "target": "#returnedLabel,#illustrationNote",
+          "method": "to",
+          "group": "visual",
+          "start": 20.65,
+          "duration": 0.4,
+          "end": 21.05,
+          "totalDuration": 0.4,
+          "position": 20.65,
+          "unresolved": [
+            "endpointProperties"
+          ],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 20.65,
+              "properties": {}
+            },
+            {
+              "pct": 100,
+              "time": 21.05,
+              "properties": {
+                "opacity": 1
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "#missingLabel-to-26300-visual",
+          "target": "#missingLabel",
+          "method": "to",
+          "group": "visual",
+          "start": 26.3,
+          "duration": 0.4,
+          "end": 26.7,
+          "totalDuration": 0.4,
+          "position": 26.3,
+          "unresolved": [
+            "endpointProperties"
+          ],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 26.3,
+              "properties": {}
+            },
+            {
+              "pct": 100,
+              "time": 26.7,
+              "properties": {
+                "opacity": 1
+              }
+            }
+          ],
+          "path": null
+        }
+      ],
+      "traces": [],
+      "cssKeyframes": [],
+      "anime": []
+    }
+  ],
+  "_meta": {
+    "version": "0.8.186",
+    "latestVersion": "0.8.186",
+    "updateAvailable": false
+  }
+}

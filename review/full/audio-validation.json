@@ -1,0 +1,44 @@
+{
+  "checks": {
+    "sampleMusicAlignment": true,
+    "noSilenceAtThirtySeconds": true,
+    "fullAudioLength": true
+  },
+  "first27SecondsCorrelation": 0.9999999999999999,
+  "alignmentLagSamples": 0,
+  "sampleRate": 24000,
+  "aroundThirtySeconds": [
+    {
+      "start": 29.0,
+      "rms": 0.26052358746528625
+    },
+    {
+      "start": 29.25,
+      "rms": 0.26715731620788574
+    },
+    {
+      "start": 29.5,
+      "rms": 0.23538246750831604
+    },
+    {
+      "start": 29.75,
+      "rms": 0.2337242066860199
+    },
+    {
+      "start": 30.0,
+      "rms": 0.24823671579360962
+    },
+    {
+      "start": 30.25,
+      "rms": 0.251997709274292
+    },
+    {
+      "start": 30.5,
+      "rms": 0.2521558701992035
+    },
+    {
+      "start": 30.75,
+      "rms": 0.27252933382987976
+    }
+  ]
+}

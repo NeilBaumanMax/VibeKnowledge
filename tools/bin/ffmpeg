@@ -1,0 +1,4 @@
+#!/bin/sh
+set -eu
+workspace_dir=$(CDPATH= cd -- "$(dirname -- "$0")/../.." && pwd)
+exec "$workspace_dir/.venv/bin/python" -c 'import os, sys, imageio_ffmpeg; exe=imageio_ffmpeg.get_ffmpeg_exe(); os.execv(exe,[exe,*sys.argv[1:]])' "$@"

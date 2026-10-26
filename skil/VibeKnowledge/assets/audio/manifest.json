@@ -1,0 +1,20 @@
+{
+  "title": "千年之后（氛围版）",
+  "path": "assets/audio/千年之后_氛围版.ogg",
+  "sha256": "4223d2706afcada65b5b51c2b7c0ed276c77ba908fc5e31daadc63072ed1ce92",
+  "bytes": 20363166,
+  "source": "用户指定Music目录中的《千年之后（氛围版）》OGG；2026-10-26核对与随包文件完全一致",
+  "source_duration_seconds": 174.413,
+  "source_channels": 12,
+  "source_sample_rate": 44100,
+  "excerpt_start_seconds": 1.562811791383222,
+  "concept_reveal_seconds": 17,
+  "preview_seconds": 30,
+  "full_seconds_default": 78,
+  "fixed_music": true,
+  "license": "第三方曲目；用户指定复用，未声明为原创或确认公开发布授权",
+  "cues": [
+    "assets/audio/sample-cues.json",
+    "assets/audio/full-cues.json"
+  ]
+}

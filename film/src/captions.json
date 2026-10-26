@@ -1,0 +1,285 @@
+[
+  {
+    "id": "hook",
+    "start": 0,
+    "end": 4,
+    "kind": "hook",
+    "lines": [
+      "你看到的成功"
+    ],
+    "lineDelays": [
+      0
+    ]
+  },
+  {
+    "id": "reverse",
+    "start": 2,
+    "end": 4,
+    "kind": "reverse",
+    "lines": [
+      "其实筛掉了无数失败"
+    ],
+    "lineDelays": [
+      0
+    ]
+  },
+  {
+    "id": "question",
+    "start": 4,
+    "end": 7.3,
+    "kind": "lower",
+    "lines": [
+      "为什么成功经验",
+      "常常会误导你？"
+    ],
+    "lineDelays": [
+      0,
+      0.4
+    ]
+  },
+  {
+    "id": "incomplete",
+    "start": 7.3,
+    "end": 11.3,
+    "kind": "lower",
+    "lines": [
+      "因为你看到的……",
+      "从来不是全部"
+    ],
+    "lineDelays": [
+      0,
+      1.7
+    ]
+  },
+  {
+    "id": "method",
+    "start": 11.3,
+    "end": 13.7,
+    "kind": "top",
+    "lines": [
+      "同一种方法，也有人失败"
+    ],
+    "lineDelays": [
+      0
+    ]
+  },
+  {
+    "id": "inference",
+    "start": 13.7,
+    "end": 16.2,
+    "kind": "top",
+    "lines": [
+      "你却只看见了成功者"
+    ],
+    "lineDelays": [
+      0
+    ]
+  },
+  {
+    "id": "reveal",
+    "start": 17,
+    "end": 19.5,
+    "kind": "reveal",
+    "lines": [
+      "幸存者偏差"
+    ],
+    "lineDelays": [
+      0
+    ],
+    "english": "SURVIVORSHIP BIAS"
+  },
+  {
+    "id": "aircraft",
+    "start": 19.5,
+    "end": 22.3,
+    "kind": "top",
+    "lines": [
+      "二战：只统计返航飞机"
+    ],
+    "lineDelays": [
+      0
+    ]
+  },
+  {
+    "id": "wrong",
+    "start": 22.3,
+    "end": 24.8,
+    "kind": "top",
+    "lines": [
+      "弹孔多，就先加固？"
+    ],
+    "lineDelays": [
+      0
+    ]
+  },
+  {
+    "id": "consequence",
+    "start": 24.8,
+    "end": 27.4,
+    "kind": "top",
+    "lines": [
+      "关键部位中弹，可能难以返航"
+    ],
+    "lineDelays": [
+      0.15
+    ]
+  },
+  {
+    "id": "missing",
+    "start": 27.4,
+    "end": 29.733333,
+    "kind": "top",
+    "lines": [
+      "没回来的，没进入统计"
+    ],
+    "lineDelays": [
+      0
+    ]
+  },
+  {
+    "id": "wald",
+    "start": 29.733333,
+    "end": 33.933333,
+    "kind": "top",
+    "lines": [
+      "Wald研究的是中弹后的风险"
+    ],
+    "lineDelays": [
+      0
+    ]
+  },
+  {
+    "id": "armor",
+    "start": 33.933333,
+    "end": 37.5,
+    "kind": "top",
+    "lines": [
+      "要保护的，是致命薄弱处"
+    ],
+    "lineDelays": [
+      0
+    ]
+  },
+  {
+    "id": "caution",
+    "start": 37.5,
+    "end": 41.333333,
+    "kind": "top",
+    "lines": [
+      "弹孔少，不自动等于危险"
+    ],
+    "lineDelays": [
+      0
+    ]
+  },
+  {
+    "id": "realworld",
+    "start": 41.333333,
+    "end": 44.8,
+    "kind": "top",
+    "lines": [
+      "成功经验，也有同样的问题"
+    ],
+    "lineDelays": [
+      0
+    ]
+  },
+  {
+    "id": "try_success",
+    "start": 44.8,
+    "end": 48.266667,
+    "kind": "top",
+    "lines": [
+      "有人照做，成功了"
+    ],
+    "lineDelays": [
+      0
+    ]
+  },
+  {
+    "id": "try_failure",
+    "start": 48.266667,
+    "end": 51.7,
+    "kind": "top",
+    "lines": [
+      "也有人照做，却失败了"
+    ],
+    "lineDelays": [
+      0
+    ]
+  },
+  {
+    "id": "overestimate",
+    "start": 51.7,
+    "end": 55.2,
+    "kind": "top",
+    "lines": [
+      "只听前者，就会高估方法"
+    ],
+    "lineDelays": [
+      0
+    ]
+  },
+  {
+    "id": "reference",
+    "start": 55.2,
+    "end": 58.7,
+    "kind": "top",
+    "lines": [
+      "经验可以参考"
+    ],
+    "lineDelays": [
+      0
+    ]
+  },
+  {
+    "id": "whole",
+    "start": 58.7,
+    "end": 61.866667,
+    "kind": "top",
+    "lines": [
+      "有效与否，要看完整样本"
+    ],
+    "lineDelays": [
+      0
+    ]
+  },
+  {
+    "id": "ask_missing",
+    "start": 61.866667,
+    "end": 65.4,
+    "kind": "top",
+    "lines": [
+      "先问：失败的人去了哪里？"
+    ],
+    "lineDelays": [
+      0
+    ]
+  },
+  {
+    "id": "ask_conditions",
+    "start": 65.4,
+    "end": 68.8,
+    "kind": "top",
+    "lines": [
+      "再问：条件真的一样吗？"
+    ],
+    "lineDelays": [
+      0
+    ]
+  },
+  {
+    "id": "ending",
+    "start": 68.8,
+    "end": 78,
+    "kind": "ending",
+    "lines": [
+      "你看到的经验，",
+      "可能只是幸存者的回声。"
+    ],
+    "lineDelays": [
+      0,
+      4.066667
+    ]
+  }
+]

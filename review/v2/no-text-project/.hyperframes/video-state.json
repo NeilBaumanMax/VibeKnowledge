@@ -1,0 +1,245 @@
+{
+  "version": 1,
+  "historyId": "c28ec2cc-7afd-477d-9fc8-4e8471a9214c",
+  "currentRevision": "3fe87df5-e6d1-48a4-a386-04153b27fcc6",
+  "pendingChanges": false,
+  "files": {
+    "index.html": {
+      "hash": "262c411a3214c3554f4a9b6faced994b0128e953f607cd8398a724aeec27fa66",
+      "content": "/Users/neil/.cache/hyperframes/history/c28ec2cc-7afd-477d-9fc8-4e8471a9214c/blobs/26/262c411a3214c3554f4a9b6faced994b0128e953f607cd8398a724aeec27fa66"
+    }
+  },
+  "revisions": {
+    "3fe87df5-e6d1-48a4-a386-04153b27fcc6": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1792721543120,
+      "endedAt": 1792721543120,
+      "files": {
+        "index.html": {
+          "before": "/Users/neil/.cache/hyperframes/history/c28ec2cc-7afd-477d-9fc8-4e8471a9214c/blobs/a0/a0822a8889ec9c6628248966a012066049320482f7cc9c0a8384b1ab16e7576a",
+          "after": "/Users/neil/.cache/hyperframes/history/c28ec2cc-7afd-477d-9fc8-4e8471a9214c/blobs/26/262c411a3214c3554f4a9b6faced994b0128e953f607cd8398a724aeec27fa66"
+        }
+      }
+    }
+  },
+  "checks": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "snapshots": {
+    "latest": {
+      "revision": "3fe87df5-e6d1-48a4-a386-04153b27fcc6",
+      "id": "dcb8b305-8085-4854-8ad1-ea36442cc09b-9"
+    },
+    "revisions": {
+      "3fe87df5-e6d1-48a4-a386-04153b27fcc6": [
+        {
+          "scope": "full",
+          "id": "dcb8b305-8085-4854-8ad1-ea36442cc09b-0",
+          "image": "/Users/neil/Documents/Project/Vibe_Knowledge/review/v2/no-text-frames/frame-00-at-1.4s.png",
+          "time": 1.4,
+          "metadata": {
+            "width": 1920,
+            "height": 1080,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1792721547169,
+          "contentHash": "8688c0d82131614dc0cc3c54a938b19c6ec06dee812c2ec5d85c0aa1b6decf3f",
+          "revision": "3fe87df5-e6d1-48a4-a386-04153b27fcc6",
+          "inputFingerprint": "d08055ce1c531314391c235cc32c0b4a8f4c1670007fb34f6a46492e658da8ea",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "dcb8b305-8085-4854-8ad1-ea36442cc09b-1",
+          "image": "/Users/neil/Documents/Project/Vibe_Knowledge/review/v2/no-text-frames/frame-01-at-3.2s.png",
+          "time": 3.2,
+          "metadata": {
+            "width": 1920,
+            "height": 1080,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1792721547169,
+          "contentHash": "476d7414b00e7b8bb51fd523a2df53b578eb94217f19b96a472aa8794ccdfe3d",
+          "revision": "3fe87df5-e6d1-48a4-a386-04153b27fcc6",
+          "inputFingerprint": "d08055ce1c531314391c235cc32c0b4a8f4c1670007fb34f6a46492e658da8ea",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "dcb8b305-8085-4854-8ad1-ea36442cc09b-2",
+          "image": "/Users/neil/Documents/Project/Vibe_Knowledge/review/v2/no-text-frames/frame-02-at-5.5s.png",
+          "time": 5.5,
+          "metadata": {
+            "width": 1920,
+            "height": 1080,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1792721547169,
+          "contentHash": "d38d3483f165a493f1143434e6d69ea9e8a2a56d08ed484781952a79ea27c25f",
+          "revision": "3fe87df5-e6d1-48a4-a386-04153b27fcc6",
+          "inputFingerprint": "d08055ce1c531314391c235cc32c0b4a8f4c1670007fb34f6a46492e658da8ea",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "dcb8b305-8085-4854-8ad1-ea36442cc09b-3",
+          "image": "/Users/neil/Documents/Project/Vibe_Knowledge/review/v2/no-text-frames/frame-03-at-9.5s.png",
+          "time": 9.5,
+          "metadata": {
+            "width": 1920,
+            "height": 1080,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1792721547169,
+          "contentHash": "ddb01d08defd0b887f3d6e28612994fa576c9a2d60ffc75e2204675e4d5d99ac",
+          "revision": "3fe87df5-e6d1-48a4-a386-04153b27fcc6",
+          "inputFingerprint": "d08055ce1c531314391c235cc32c0b4a8f4c1670007fb34f6a46492e658da8ea",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "dcb8b305-8085-4854-8ad1-ea36442cc09b-4",
+          "image": "/Users/neil/Documents/Project/Vibe_Knowledge/review/v2/no-text-frames/frame-04-at-20s.png",
+          "time": 20,
+          "metadata": {
+            "width": 1920,
+            "height": 1080,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1792721547169,
+          "contentHash": "d78f0f05fd4450d439ea8f0bed81407ba623dd7ab626b782499d4b571259f0da",
+          "revision": "3fe87df5-e6d1-48a4-a386-04153b27fcc6",
+          "inputFingerprint": "d08055ce1c531314391c235cc32c0b4a8f4c1670007fb34f6a46492e658da8ea",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "dcb8b305-8085-4854-8ad1-ea36442cc09b-5",
+          "image": "/Users/neil/Documents/Project/Vibe_Knowledge/review/v2/no-text-frames/frame-05-at-22s.png",
+          "time": 22,
+          "metadata": {
+            "width": 1920,
+            "height": 1080,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1792721547169,
+          "contentHash": "3d5f9cd6a3868c13a72ebfc91f67ea4f8a125c12b1e9d2b262f2ccc8475f9a95",
+          "revision": "3fe87df5-e6d1-48a4-a386-04153b27fcc6",
+          "inputFingerprint": "d08055ce1c531314391c235cc32c0b4a8f4c1670007fb34f6a46492e658da8ea",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "dcb8b305-8085-4854-8ad1-ea36442cc09b-6",
+          "image": "/Users/neil/Documents/Project/Vibe_Knowledge/review/v2/no-text-frames/frame-06-at-25.2s.png",
+          "time": 25.2,
+          "metadata": {
+            "width": 1920,
+            "height": 1080,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1792721547169,
+          "contentHash": "fdb75e54e8606fb52ef0a0b9b50cd9c1b85261813e83aac3d59916352b088c71",
+          "revision": "3fe87df5-e6d1-48a4-a386-04153b27fcc6",
+          "inputFingerprint": "d08055ce1c531314391c235cc32c0b4a8f4c1670007fb34f6a46492e658da8ea",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "dcb8b305-8085-4854-8ad1-ea36442cc09b-7",
+          "image": "/Users/neil/Documents/Project/Vibe_Knowledge/review/v2/no-text-frames/frame-07-at-26.8s.png",
+          "time": 26.8,
+          "metadata": {
+            "width": 1920,
+            "height": 1080,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1792721547169,
+          "contentHash": "46f709832183bbd367d40338060451c5872f4c0eaf9a65e9fbd7fc4f0ce0ff3f",
+          "revision": "3fe87df5-e6d1-48a4-a386-04153b27fcc6",
+          "inputFingerprint": "d08055ce1c531314391c235cc32c0b4a8f4c1670007fb34f6a46492e658da8ea",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "dcb8b305-8085-4854-8ad1-ea36442cc09b-8",
+          "image": "/Users/neil/Documents/Project/Vibe_Knowledge/review/v2/no-text-frames/frame-08-at-29.2s.png",
+          "time": 29.2,
+          "metadata": {
+            "width": 1920,
+            "height": 1080,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1792721547169,
+          "contentHash": "504e390b76d072c7506705197409b8f1c9f8cc9f547d7989d742b8dd709cce54",
+          "revision": "3fe87df5-e6d1-48a4-a386-04153b27fcc6",
+          "inputFingerprint": "d08055ce1c531314391c235cc32c0b4a8f4c1670007fb34f6a46492e658da8ea",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "dcb8b305-8085-4854-8ad1-ea36442cc09b-9",
+          "image": "/Users/neil/Documents/Project/Vibe_Knowledge/review/v2/no-text-frames/frame-09-at-29.1s.png",
+          "time": 29.1,
+          "metadata": {
+            "width": 1920,
+            "height": 1080,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1792721547169,
+          "contentHash": "504e390b76d072c7506705197409b8f1c9f8cc9f547d7989d742b8dd709cce54",
+          "revision": "3fe87df5-e6d1-48a4-a386-04153b27fcc6",
+          "inputFingerprint": "d08055ce1c531314391c235cc32c0b4a8f4c1670007fb34f6a46492e658da8ea",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ]
+    },
+    "unversioned": []
+  }
+}

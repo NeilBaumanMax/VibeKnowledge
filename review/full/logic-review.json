@@ -1,0 +1,287 @@
+{
+  "checks": {
+    "durationAndEnding": true,
+    "firstTenCaptionsPreserved": true,
+    "introSamplePositionsPreserved": true,
+    "allNewSamplePointsMoving": true,
+    "chineseLinesAtMost18": true,
+    "newCaptionsReadableHold": true,
+    "keyBeatErrorUnderHalfFrame": true
+  },
+  "passed": 7,
+  "failed": 0,
+  "motion": [
+    {
+      "time": 46,
+      "moving": 24,
+      "meanDistancePx": 7.49642060302251
+    },
+    {
+      "time": 50,
+      "moving": 24,
+      "meanDistancePx": 7.175445842336656
+    },
+    {
+      "time": 54,
+      "moving": 24,
+      "meanDistancePx": 7.195387816523286
+    },
+    {
+      "time": 60.5,
+      "moving": 24,
+      "meanDistancePx": 7.568506891453008
+    },
+    {
+      "time": 67,
+      "moving": 24,
+      "meanDistancePx": 7.402123210747057
+    }
+  ],
+  "reading": [
+    {
+      "id": "hook",
+      "line": "你看到的成功",
+      "chineseChars": 6,
+      "start": 0,
+      "settled": 0.585,
+      "hold": 3.255
+    },
+    {
+      "id": "reverse",
+      "line": "其实筛掉了无数失败",
+      "chineseChars": 9,
+      "start": 2,
+      "settled": 2.6599999999999997,
+      "hold": 1.18
+    },
+    {
+      "id": "question",
+      "line": "为什么成功经验",
+      "chineseChars": 7,
+      "start": 4,
+      "settled": 4.630000000000001,
+      "hold": 2.51
+    },
+    {
+      "id": "question",
+      "line": "常常会误导你？",
+      "chineseChars": 6,
+      "start": 4.4,
+      "settled": 5.030000000000001,
+      "hold": 2.1099999999999994
+    },
+    {
+      "id": "incomplete",
+      "line": "因为你看到的……",
+      "chineseChars": 6,
+      "start": 7.3,
+      "settled": 7.96,
+      "hold": 3.180000000000001
+    },
+    {
+      "id": "incomplete",
+      "line": "从来不是全部",
+      "chineseChars": 6,
+      "start": 9,
+      "settled": 9.584999999999999,
+      "hold": 1.5550000000000006
+    },
+    {
+      "id": "method",
+      "line": "同一种方法，也有人失败",
+      "chineseChars": 10,
+      "start": 11.3,
+      "settled": 11.96,
+      "hold": 1.5799999999999985
+    },
+    {
+      "id": "inference",
+      "line": "你却只看见了成功者",
+      "chineseChars": 9,
+      "start": 13.7,
+      "settled": 14.36,
+      "hold": 1.68
+    },
+    {
+      "id": "reveal",
+      "line": "幸存者偏差",
+      "chineseChars": 5,
+      "start": 17,
+      "settled": 17.35,
+      "hold": 1.9899999999999998
+    },
+    {
+      "id": "aircraft",
+      "line": "二战：只统计返航飞机",
+      "chineseChars": 9,
+      "start": 19.5,
+      "settled": 20.16,
+      "hold": 1.9800000000000006
+    },
+    {
+      "id": "wrong",
+      "line": "弹孔多，就先加固？",
+      "chineseChars": 7,
+      "start": 22.3,
+      "settled": 22.96,
+      "hold": 1.68
+    },
+    {
+      "id": "consequence",
+      "line": "关键部位中弹，可能难以返航",
+      "chineseChars": 12,
+      "start": 24.95,
+      "settled": 25.61,
+      "hold": 1.6299999999999992
+    },
+    {
+      "id": "missing",
+      "line": "没回来的，没进入统计",
+      "chineseChars": 9,
+      "start": 27.4,
+      "settled": 28.06,
+      "hold": 1.5133329999999996
+    },
+    {
+      "id": "wald",
+      "line": "Wald研究的是中弹后的风险",
+      "chineseChars": 10,
+      "start": 29.733333,
+      "settled": 30.393333,
+      "hold": 3.380000000000003
+    },
+    {
+      "id": "armor",
+      "line": "要保护的，是致命薄弱处",
+      "chineseChars": 10,
+      "start": 33.933333,
+      "settled": 34.593332999999994,
+      "hold": 2.746667000000006
+    },
+    {
+      "id": "caution",
+      "line": "弹孔少，不自动等于危险",
+      "chineseChars": 10,
+      "start": 37.5,
+      "settled": 38.16,
+      "hold": 3.013333000000007
+    },
+    {
+      "id": "realworld",
+      "line": "成功经验，也有同样的问题",
+      "chineseChars": 11,
+      "start": 41.333333,
+      "settled": 41.993333,
+      "hold": 2.6466669999999977
+    },
+    {
+      "id": "try_success",
+      "line": "有人照做，成功了",
+      "chineseChars": 7,
+      "start": 44.8,
+      "settled": 45.459999999999994,
+      "hold": 2.6466670000000048
+    },
+    {
+      "id": "try_failure",
+      "line": "也有人照做，却失败了",
+      "chineseChars": 9,
+      "start": 48.266667,
+      "settled": 48.926666999999995,
+      "hold": 2.6133330000000083
+    },
+    {
+      "id": "overestimate",
+      "line": "只听前者，就会高估方法",
+      "chineseChars": 10,
+      "start": 51.7,
+      "settled": 52.36,
+      "hold": 2.6800000000000037
+    },
+    {
+      "id": "reference",
+      "line": "经验可以参考",
+      "chineseChars": 6,
+      "start": 55.2,
+      "settled": 55.785000000000004,
+      "hold": 2.7550000000000034
+    },
+    {
+      "id": "whole",
+      "line": "有效与否，要看完整样本",
+      "chineseChars": 10,
+      "start": 58.7,
+      "settled": 59.36,
+      "hold": 2.3466670000000005
+    },
+    {
+      "id": "ask_missing",
+      "line": "先问：失败的人去了哪里？",
+      "chineseChars": 10,
+      "start": 61.866667,
+      "settled": 62.526666999999996,
+      "hold": 2.7133330000000098
+    },
+    {
+      "id": "ask_conditions",
+      "line": "再问：条件真的一样吗？",
+      "chineseChars": 9,
+      "start": 65.4,
+      "settled": 66.06,
+      "hold": 2.579999999999995
+    },
+    {
+      "id": "ending",
+      "line": "你看到的经验，",
+      "chineseChars": 6,
+      "start": 68.8,
+      "settled": 69.42999999999999,
+      "hold": 8.570000000000004
+    },
+    {
+      "id": "ending",
+      "line": "可能只是幸存者的回声。",
+      "chineseChars": 10,
+      "start": 72.86666699999999,
+      "settled": 73.52666699999999,
+      "hold": 4.473333000000007
+    }
+  ],
+  "beatErrors": [
+    {
+      "edit": 17,
+      "onset": 17.00499,
+      "errorMs": 4.989999999999384
+    },
+    {
+      "edit": 29.733333,
+      "onset": 29.73605,
+      "errorMs": 2.7170000000005246
+    },
+    {
+      "edit": 33.933333,
+      "onset": 33.93651,
+      "errorMs": 3.1770000000008736
+    },
+    {
+      "edit": 41.333333,
+      "onset": 41.31973,
+      "errorMs": 13.603000000003362
+    },
+    {
+      "edit": 48.266667,
+      "onset": 48.26395,
+      "errorMs": 2.716999999996972
+    },
+    {
+      "edit": 61.866667,
+      "onset": 61.86304,
+      "errorMs": 3.627000000001601
+    },
+    {
+      "edit": 72.866667,
+      "onset": 72.86803,
+      "errorMs": 1.3629999999977827
+    }
+  ]
+}

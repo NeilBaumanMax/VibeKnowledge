@@ -1,0 +1,16 @@
+[
+  {
+    "snapshot": "focus-proof/frame-00-at-5.5s.png",
+    "encoded_frame": "final-frames/03_5.500.png",
+    "mean_absolute_pixel_error": 2.070402199074074,
+    "threshold": 3.0,
+    "passed": true
+  },
+  {
+    "snapshot": "focus-proof/frame-03-at-17.5s.png",
+    "encoded_frame": "final-frames/10_17.500.png",
+    "mean_absolute_pixel_error": 2.1193590856481483,
+    "threshold": 3.0,
+    "passed": true
+  }
+]

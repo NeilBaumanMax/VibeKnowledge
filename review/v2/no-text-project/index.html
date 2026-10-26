@@ -1,0 +1,176 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=1920,height=1080"><title>幸存者偏差 · Vibe 知识大赏</title><script src="assets/vendor/gsap.min.js"></script><style>@font-face{font-family:Display;src:url('assets/fonts/display.woff2')}@font-face{font-family:Body;src:url('assets/fonts/body.woff2')}
+:root{--bg:#07090e;--ink:#f3eee4;--gold:#e8c985;--red:#ed8174;--muted:#9da8b5}
+*{margin:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:var(--bg)}
+#root{position:relative;width:100%;height:100%;background:var(--bg);color:var(--ink);font-family:Body,sans-serif}
+#universe{position:absolute;inset:0;width:100%;height:100%}.clip{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.caption{position:absolute;left:120px;right:120px;font-family:Display,sans-serif;font-size:70px;line-height:1.4;letter-spacing:2px;opacity:1}
+.caption p{white-space:nowrap;opacity:0}.gold{color:var(--gold)}.red{color:var(--red)}
+.hook .caption{top:210px;left:128px;font-size:112px;letter-spacing:1px;right:auto}.reverse .caption{top:370px;left:130px;font-size:80px;right:auto}
+.lower .caption{top:110px;left:130px;text-align:left;font-size:60px;line-height:1.45}
+#question .caption{top:790px;text-align:center;left:120px;font-size:54px;line-height:1.35}
+#incomplete .caption{top:110px;font-size:68px}
+.top .caption{top:135px;font-size:66px;text-align:center}
+.reveal .caption{top:353px;text-align:center;font-size:150px;letter-spacing:9px;color:var(--gold)}
+.reveal .english{font-family:Body,sans-serif;font-size:30px;letter-spacing:12px;margin-top:24px;color:var(--ink);opacity:0}
+.tag{position:absolute;color:var(--gold);font:43px Display,sans-serif;letter-spacing:1px;opacity:0}
+#tag1{left:950px;top:322px}#tag2{left:1180px;top:322px}#tag3{left:1410px;top:322px}
+.scene-note{position:absolute;font:30px Body,sans-serif;color:#c1c9d5;opacity:0;letter-spacing:2px}
+#returnedLabel{left:1134px;top:351px;color:var(--gold);font-size:34px}
+#missingLabel{left:410px;top:792px;font-size:34px}
+#illustrationNote{left:1134px;top:900px;font-size:28px;color:#a9b4c4}
+#experimentHint{left:430px;top:925px;font-size:28px;color:#a9b4c4}
+#flash{position:absolute;inset:0;background:#e8c985;opacity:0;pointer-events:none}
+/* Review fixes: reserve negative space around reading text. */
+.muted{color:#a5b0c0}
+#question .caption{top:130px;text-align:left;left:130px;font-size:64px;line-height:1.42}
+.reveal .caption{top:155px}
+#missingLabel{top:760px}
+
+#tag1{left:860px}#tag2{left:1130px}#tag3{left:1450px}
+.caption,.scene-note,.tag{visibility:hidden!important}</style></head><body><div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1920" data-height="1080" data-fps="30">
+<canvas id="universe" width="1920" height="1080" data-layout-ignore="true"></canvas>
+<div id="tag1" class="tag">考研上岸</div><div id="tag2" class="tag">创业成功</div><div id="tag3" class="tag">年入百万</div>
+<div id="returnedLabel" class="scene-note">返航样本</div><div id="missingLabel" class="scene-note">未进入统计</div><div id="illustrationNote" class="scene-note">二战飞机 · 原理示意</div>
+<section class="clip hook" id="hook" data-start="0" data-duration="4.000000" data-track-index="2"><div class="caption"><p>你看到的<span class="gold">成功</span></p></div></section>
+<section class="clip reverse" id="reverse" data-start="2" data-duration="2.000000" data-track-index="2"><div class="caption"><p>其实筛掉了<span class="muted">无数失败</span></p></div></section>
+<section class="clip lower" id="question" data-start="4" data-duration="3.300000" data-track-index="2"><div class="caption"><p>为什么<span class="gold">成功</span>经验</p><p>常常会误导你？</p></div></section>
+<section class="clip lower" id="incomplete" data-start="7.3" data-duration="4.000000" data-track-index="2"><div class="caption"><p>因为你看到的……</p><p>从来不是全部</p></div></section>
+<section class="clip top" id="method" data-start="11.3" data-duration="2.400000" data-track-index="2"><div class="caption"><p>同样尝试，也有人失败</p></div></section>
+<section class="clip top" id="inference" data-start="13.7" data-duration="2.500000" data-track-index="2"><div class="caption"><p>但你只听到了<span class="gold">成功</span></p></div></section>
+<section class="clip reveal" id="reveal" data-start="17" data-duration="2.500000" data-track-index="2"><div class="caption"><p>幸存者偏差</p><div class="english">SURVIVORSHIP BIAS</div></div></section>
+<section class="clip top" id="aircraft" data-start="19.5" data-duration="2.800000" data-track-index="2"><div class="caption"><p>二战：只统计返航飞机</p></div></section>
+<section class="clip top" id="wrong" data-start="22.3" data-duration="2.500000" data-track-index="2"><div class="caption"><p>弹孔多，就先加固？</p></div></section>
+<section class="clip top" id="consequence" data-start="24.8" data-duration="2.600000" data-track-index="2"><div class="caption"><p>关键部位中弹，可能难以返航</p></div></section>
+<section class="clip top" id="conclusion" data-start="27.4" data-duration="2.600000" data-track-index="2"><div class="caption"><p>只看幸存者，就漏掉了全貌</p></div></section>
+<div id="flash" data-layout-ignore="true"></div>
+<audio id="score" src="assets/audio/score.wav" data-start="0" data-duration="30" data-track-index="0" data-volume="1"></audio>
+</div><script>const AUDIO_ONSETS=[0.21315192743763967,0.5024943310657575,0.7918367346938755,1.0811791383219935,1.370521541950111,1.6598639455782291,1.9492063492063472,2.238548752834465,2.532879818594103,2.8272108843537396,3.106575963718819,3.395918367346937,3.685260770975055,3.974603174603173,4.263945578231291,4.558276643990928,4.847619047619046,5.131972789115645,5.4263038548752816,5.720634920634919,6.004988662131518,6.294331065759636,6.5786848072562325,6.87301587301587,7.157369614512469,7.451700680272106,7.736054421768705,8.030385487528342,8.31473922902494,8.614058956916097,8.898412698412695,9.182766439909294,9.477097505668931,9.76643990929705,10.055782312925167,10.365079365079362,10.584580498866211,10.92879818594104,11.243083900226754,11.522448979591834,11.801814058956914,12.016326530612242,12.37551020408163,12.684807256235825,12.964172335600905,13.253514739229022,13.458049886621312,13.777324263038546,14.176417233560088,14.395918367346937,14.685260770975056,14.954648526077097,15.26394557823129,15.648072562358276,15.857596371882085,16.18185941043084,16.570975056689342,16.78049886621315,17,17.294331065759636,17.578684807256234,17.868027210884353,18.16235827664399,18.451700680272108,18.736054421768706,19.025396825396825,19.31972789115646,19.60907029478458,19.8984126984127,20.182766439909297,20.477097505668933,20.766439909297052,21.05578231292517,21.39501133786848,21.634467120181405,21.923809523809524,22.208163265306123,22.50249433106576,22.791836734693877,23.081179138321996,23.365532879818595,23.65487528344671,23.94920634920635,24.238548752834465,24.527891156462584,24.812244897959182,25.10657596371882,25.400907029478457,25.685260770975056,26.019501133786846,26.26394557823129,26.55328798185941,26.847619047619048,27.131972789115647,27.426303854875282,27.70566893424036,28,28.28934240362812,28.583673469387755,28.868027210884353,29.16235827664399,29.44172335600907,29.736054421768706];const CAPTIONS=[{"id":"hook","start":0,"end":4,"kind":"hook","lines":["你看到的成功"],"lineDelays":[0]},{"id":"reverse","start":2,"end":4,"kind":"reverse","lines":["其实筛掉了无数失败"],"lineDelays":[0]},{"id":"question","start":4,"end":7.3,"kind":"lower","lines":["为什么成功经验","常常会误导你？"],"lineDelays":[0,0.4]},{"id":"incomplete","start":7.3,"end":11.3,"kind":"lower","lines":["因为你看到的……","从来不是全部"],"lineDelays":[0,1.7]},{"id":"method","start":11.3,"end":13.7,"kind":"top","lines":["同样尝试，也有人失败"],"lineDelays":[0]},{"id":"inference","start":13.7,"end":16.2,"kind":"top","lines":["但你只听到了成功"],"lineDelays":[0]},{"id":"reveal","start":17,"end":19.5,"kind":"reveal","lines":["幸存者偏差"],"lineDelays":[0],"english":"SURVIVORSHIP BIAS"},{"id":"aircraft","start":19.5,"end":22.3,"kind":"top","lines":["二战：只统计返航飞机"],"lineDelays":[0]},{"id":"wrong","start":22.3,"end":24.8,"kind":"top","lines":["弹孔多，就先加固？"],"lineDelays":[0]},{"id":"consequence","start":24.8,"end":27.4,"kind":"top","lines":["关键部位中弹，可能难以返航"],"lineDelays":[0.15]},{"id":"conclusion","start":27.4,"end":30,"kind":"top","lines":["只看幸存者，就漏掉了全貌"],"lineDelays":[0]}];// Purpose-drawn twin-engine aircraft. Not a historical aircraft model or dataset.
+const AIRFRAME_PATH='M500 18 C476 20 472 63 470 110 L464 212 L72 355 L54 410 L463 325 L476 477 L322 545 L321 581 L484 557 L500 590 L516 557 L679 581 L678 545 L524 477 L537 325 L946 410 L928 355 L536 212 L530 110 C528 63 524 20 500 18 Z';
+let holesCache;
+function holePositions(){
+ if(holesCache)return holesCache;
+ const test=document.createElement('canvas').getContext('2d');const path=new Path2D(AIRFRAME_PATH);let out=[];
+ for(const side of [-1,1])for(const tail of [false,true]){
+  const count=tail?8:23;let j=0,n=0;
+  while(n<count&&j<10000){j++;let u=seeded(j+(tail?932:43)),v=seeded(j+(tail?1921:559));
+   let x=500+side*(tail?40+u*145:85+u*345),y=tail?495+v*82:245+v*155;
+   let engine=(x>319&&x<385||x>615&&x<681)&&y<367;
+   if(!engine&&test.isPointInPath(path,x,y)){out.push({x,y});n++;}
+  }
+ }
+ holesCache=out;return out;
+}
+function paintAircraft(x,y,scale,color,hits,critical=0,rotation=0){
+ ctx.save();ctx.translate(x,y);ctx.rotate(rotation);ctx.scale(scale,scale);ctx.translate(-500,-300);
+ const path=new Path2D(AIRFRAME_PATH);ctx.fillStyle=color==='#e8c985'?'#182028':'#101923';ctx.fill(path);ctx.strokeStyle=color;ctx.lineWidth=3;ctx.stroke(path);
+ ctx.globalAlpha*=.65;line(500,40,500,565,color,1.2);line(80,384,463,274,color,1.2);line(920,384,537,274,color,1.2);ctx.globalAlpha/=.65;
+ ctx.strokeStyle=color;ctx.lineWidth=2.5;ctx.beginPath();ctx.roundRect(332,208,40,145,18);ctx.roundRect(628,208,40,145,18);ctx.stroke();line(306,221,398,221,color,2.5);line(602,221,694,221,color,2.5);
+ ctx.beginPath();ctx.moveTo(478,88);ctx.quadraticCurveTo(500,62,522,88);ctx.lineTo(525,130);ctx.quadraticCurveTo(500,111,475,130);ctx.closePath();ctx.stroke();
+ for(let i=0;i<holePositions().length;i++){const p=holePositions()[i],a=clamp(hits*holePositions().length-i);if(a<=0)continue;ctx.save();ctx.globalAlpha*=a;ctx.fillStyle='#ed8174';ctx.beginPath();ctx.arc(p.x,p.y,4.2,0,Math.PI*2);ctx.fill();ctx.restore();}
+ if(critical>0){ctx.save();ctx.globalAlpha*=critical;ctx.strokeStyle='#ed8174';ctx.lineWidth=4;ctx.beginPath();ctx.roundRect(322,194,60,173,22);ctx.stroke();ctx.fillStyle='#ed8174';ctx.beginPath();ctx.arc(351,265,11,0,Math.PI*2);ctx.fill();ctx.restore();}
+ ctx.restore();
+}
+function drawAircraftExperiment(t){
+ const appear=smooth(19.15,19.55,t);ctx.save();ctx.globalAlpha=appear;
+ // This aircraft visibly crosses the observation boundary before its damage is tallied.
+ const arrival=smooth(19.45,20.7,t);const px=mix(560,1420,arrival),py=mix(590,610,arrival),sc=mix(.29,.61,arrival);
+ routeCurve(400,590,1420,610,'#a4b2c4',.27);
+ const returned=arrival>.9;
+ paintAircraft(px,py,sc,returned?'#e8c985':'#d0d5dd',smooth(20.75,21.8,t),0,(1-arrival)*Math.PI*.5);
+ if(t>=20.8){ctx.save();ctx.strokeStyle='#e8c985';ctx.lineWidth=1.5;ctx.globalAlpha=.5*(1-smooth(27.4,28,t));for(let yy of [822,836,850])line(1280,yy,1560,yy,'#e8c985',1);ctx.restore();sampleMark(1690,380,true,13,.9);}
+ // Tempting hypothesis is shown, held, then withdrawn after the missing case arrives.
+ const hypothesis=smooth(22.4,22.9,t)*(1-smooth(24.8,25.1,t));
+ if(hypothesis>0){ctx.save();ctx.globalAlpha=hypothesis*.65;ctx.translate(1420,610);ctx.scale(.61,.61);ctx.translate(-500,-300);ctx.strokeStyle='#ed8174';ctx.lineWidth=3;ctx.setLineDash([12,10]);ctx.beginPath();ctx.moveTo(95,362);ctx.lineTo(430,250);ctx.lineTo(435,320);ctx.lineTo(85,394);ctx.closePath();ctx.moveTo(905,362);ctx.lineTo(570,250);ctx.lineTo(565,320);ctx.lineTo(915,394);ctx.closePath();ctx.stroke();ctx.restore();}
+ // A second aircraft follows the same prospective return route, but stops short after an engine hit.
+ if(t>=24.7){const enter=smooth(24.7,25.05,t),hit=smooth(25.05,25.17,t),fall=smooth(25.35,26.8,t);let x=mix(500,660,fall),y=mix(545,650,fall);ctx.save();ctx.globalAlpha=enter;
+  ctx.save();ctx.strokeStyle='#8794a6';ctx.setLineDash([9,12]);ctx.globalAlpha=.38;ctx.lineWidth=1.7;ctx.beginPath();ctx.moveTo(520,550);ctx.bezierCurveTo(760,550,930,610,1080,610);ctx.stroke();ctx.restore();
+  paintAircraft(x,y,.50,fall>.15?'#8b98ab':'#d0d5dd',0,hit,fall*-.12);
+  if(hit>0){const hx=x-149*.5,hy=y-35*.5;const travel=smooth(24.78,25.06,t);line(mix(240,hx,travel),mix(360,hy,travel),hx,hy,'#ed8174',2);ring(hx,hy,14+clamp((t-25.06)/.55)*40,Math.max(0,1-(t-25.06)/.65),'#ed8174');}
+  // Interrupted path curves down; the failed aircraft stays visible, outside the sample window.
+  if(fall>0){ctx.save();ctx.globalAlpha=.5;routeCurve(500,545,x,y,'#8b98ab',fall);ctx.restore();}
+  if(t>26.3)sampleMark(920,640,false,13,smooth(26.3,26.6,t));
+  ctx.restore();
+ }
+ // At the close, planes retain their outcomes and visually reconnect with the original cohorts.
+ if(t>=27.4){const a=smooth(27.4,28.3,t);routeCurve(660,750,600,880,'#8b98ab',a*.5);routeCurve(1420,790,1390,850,'#e8c985',a*.5);}
+ ctx.restore();
+}
+
+// Stable sample identities. Camera/observation changes never delete failed cases.
+const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v));
+const smooth=(a,b,t)=>{let u=clamp((t-a)/(b-a));return u*u*(3-2*u)};
+const mix=(a,b,u)=>a+(b-a)*u;
+function seeded(n){const x=Math.sin(n*127.1+311.7)*43758.5453123;return x-Math.floor(x)}
+const dots=Array.from({length:420},(_,i)=>{
+ const gold=i<12,k=i-12,layer=i%3;
+ return {id:i,gold,z:layer,x:gold?1125+(i%3)*145:310+(k%34)*42+(layer-1)*6,y:gold?460+Math.floor(i/3)*39:685+Math.floor(k/34)*18+(layer-1)*7};
+});
+const dotCanvas=document.getElementById('universe'),ctx=dotCanvas.getContext('2d');
+function line(x,y,x2,y2,c,w=1){ctx.strokeStyle=c;ctx.lineWidth=w;ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x2,y2);ctx.stroke()}
+function ring(x,y,r,a,c='#e8c985'){ctx.save();ctx.globalAlpha*=a;ctx.strokeStyle=c;ctx.lineWidth=1.2;ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.stroke();ctx.restore()}
+function sampleMark(x,y,success,r,alpha=1){ctx.save();ctx.translate(x,y);ctx.globalAlpha*=alpha;ctx.strokeStyle=success?'#e8c985':'#8794a6';ctx.fillStyle=success?'#e8c985':'#8794a6';ctx.lineWidth=1.3;
+ ctx.beginPath();ctx.arc(0,0,r,0,Math.PI*2);ctx.globalAlpha*=.16;ctx.fill();ctx.globalAlpha/=.16;ctx.stroke();
+ ctx.beginPath();if(success){ctx.moveTo(-r*.48,0);ctx.lineTo(-r*.12,r*.35);ctx.lineTo(r*.50,-r*.34)}else{ctx.moveTo(-r*.32,-r*.32);ctx.lineTo(r*.32,r*.32);ctx.moveTo(r*.32,-r*.32);ctx.lineTo(-r*.32,r*.32)}ctx.stroke();ctx.restore();}
+function cameraAt(t){let z=1+.38*smooth(.35,1.6,t)-.38*smooth(2,3.2,t)+1.1*smooth(3.9,4.8,t)-1.25*smooth(7,9.2,t);return {z,y:smooth(16.95,17.5,t)*120*(1-smooth(18.9,19.5,t))};}
+function samplePose(p,t){const c=cameraAt(t),depth=1+(p.z-1)*.09;return {x:1320+(p.x-1320)*c.z*depth,y:500+(p.y-500)*c.z*depth+c.y,r:(p.gold?10:4.6)*c.z*depth};}
+function windowPose(t){const c=cameraAt(t);let box={x:1320+(1055-1320)*c.z,y:500+(406-500)*c.z+c.y,w:475*c.z,h:233*c.z};
+ const reveal=smooth(17,17.5,t);for(const [k,v] of Object.entries({x:200,y:490,w:1520,h:530}))box[k]=mix(box[k],v,reveal);
+ const aircraft=smooth(18.95,19.8,t);for(const [k,v] of Object.entries({x:1080,y:330,w:680,h:550}))box[k]=mix(box[k],v,aircraft);
+ return box;
+}
+function observationWindow(t,alpha){const b=windowPose(t);ctx.save();ctx.globalAlpha*=alpha;ctx.strokeStyle='#e8c985';ctx.lineWidth=1.8;ctx.strokeRect(b.x,b.y,b.w,b.h);
+ // Four lens corners communicate an observation boundary, not a physical barrier.
+ for(const [x,y,sx,sy] of [[b.x,b.y,1,1],[b.x+b.w,b.y,-1,1],[b.x,b.y+b.h,1,-1],[b.x+b.w,b.y+b.h,-1,-1]]){line(x,y,x+sx*25,y,'#e8c985',3);line(x,y,x,y+sy*25,'#e8c985',3)}ctx.restore();}
+function routeCurve(x0,y0,x1,y1,color,alpha){ctx.save();ctx.globalAlpha*=alpha;ctx.strokeStyle=color;ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(x0,y0);ctx.bezierCurveTo(x0+240,y0,x1-280,y1,x1,y1);ctx.stroke();ctx.restore()}
+function drawParticles(t){
+ ctx.clearRect(0,0,1920,1080);ctx.fillStyle='#07090e';ctx.fillRect(0,0,1920,1080);
+ const hush=1-.98*smooth(16.2,16.75,t)*(1-smooth(17,17.12,t));
+ const bg=ctx.createRadialGradient(1300,490,50,1000,540,1100);bg.addColorStop(0,'#192431');bg.addColorStop(.6,'#0c131e');bg.addColorStop(1,'#06090e');ctx.globalAlpha=hush;ctx.fillStyle=bg;ctx.fillRect(0,0,1920,1080);
+ // Perspective planes describe sample space. No decorative random stars.
+ ctx.save();ctx.globalAlpha=.10*hush;for(let i=-6;i<=6;i++)line(960+i*80,400,960+i*330,1080,'#7e8c9e',.7);for(let i=0;i<9;i++){let y=420+i*i*9;line(80,y,1840,y,'#7e8c9e',.7)}ctx.restore();
+ let sampleAlpha=(1-smooth(19,19.9,t))*hush;
+ if(t>=27.4)sampleAlpha=.56*smooth(27.4,28.35,t);
+ ctx.save();ctx.globalAlpha=sampleAlpha;
+ for(const p of dots){let q=samplePose(p,Math.min(t,18.9));
+  if(t>=27.4){q={x:p.gold?1270+(p.id%3)*85:180+((p.id-12)%34)*23,y:p.gold?813+Math.floor(p.id/3)*22:840+Math.floor((p.id-12)/34)*9,r:p.gold?6:2.4};}
+  const completed=smooth(.15,.65,t);const a=p.gold?.95:.42+(p.z*.1);
+  if(p.gold&&t<.65){ring(q.x,q.y,q.r,1,'#a6b0be');ring(q.x,q.y,q.r+6,completed*.3);}
+  sampleMark(q.x,q.y,p.gold&&completed>.6,q.r,a);
+ }
+ ctx.restore();
+ // A single common starting node feeds both outcome groups; observation retains one.
+ if(t>=10.8&&t<16.8){let a=smooth(10.8,11.5,t)*hush;let g=samplePose(dots[0],t),f=samplePose(dots[250],t);routeCurve(250,500,g.x,g.y,'#e8c985',a*.7);routeCurve(250,500,f.x,f.y,'#a6b0be',a*.7);ring(250,500,14,a,'#e4e7e9');
+  const flow=smooth(11.2,12.9,t);for(const end of [g,f]){let x=mix(250,end.x,flow),y=mix(500,end.y,smooth(0,1,flow));ring(x,y,5,a,'#eee9df');}
+  if(t>13.3){const b=windowPose(t);routeCurve(b.x+b.w,b.y+b.h*.3,1770,350,'#e8c985',smooth(13.3,14,t)*.7);for(let k=0;k<3;k++){const s=smooth(13.5+k*.65,14.25+k*.65,t);if(s>0&&s<1)ring(mix(b.x+b.w,1770,s),mix(b.y+b.h*.3,350,s),5,.8,'#e8c985');}}
+ }
+ observationWindow(t,hush*(t<19.5?.7:1));
+ if(t>=4&&t<7.1){const a=smooth(4,4.5,t)*(1-smooth(6.8,7.1,t));ctx.save();ctx.globalAlpha=a*.7;for(let i=0;i<3;i++){const p=samplePose(dots[i],t);line(p.x,p.y-14,p.x,380,'#e8c985',1)}ctx.restore();}
+ if(t>=19.15)drawAircraftExperiment(t);
+ ctx.globalAlpha=1;
+}
+
+const tl=gsap.timeline({paused:true});
+const clockState={t:0};
+tl.to(clockState,{t:30,duration:30,ease:'none',onUpdate:()=>drawParticles(clockState.t)},0);
+window.addEventListener('hf-seek',e=>drawParticles(e.detail.time));
+for(const cap of CAPTIONS){
+ const base='#'+cap.id+' .caption';
+ cap.lines.forEach((_,i)=>{
+  const el=base+' p:nth-child('+(i+1)+')',at=cap.start+(cap.lineDelays?.[i]||0);
+  if(cap.id==='hook')tl.set(el,{opacity:1,y:0},0);
+  else if(cap.id==='reveal'){
+   tl.set(el,{opacity:1},at);tl.fromTo(el,{scale:1.08},{scale:1,duration:.3,ease:'power4.out',immediateRender:false},at);
+  }else tl.fromTo(el,{opacity:0,y:16},{opacity:1,y:0,duration:.32,ease:'power2.out',immediateRender:false},at);
+ });
+ if(cap.english)tl.to(base+' .english',{opacity:1,duration:.35},cap.start+.1);
+ if(cap.end<30)tl.to(base,{opacity:0,duration:.16,ease:'power2.in'},cap.end-.16);
+}
+tl.fromTo('#tag1,#tag2,#tag3',{opacity:0,y:12},{opacity:1,y:0,stagger:.17,duration:.35},4.25);
+tl.to('#tag1,#tag2,#tag3',{opacity:0,duration:.3},6.95);
+tl.fromTo('#flash',{opacity:.10},{opacity:0,duration:.24,ease:'power2.out',immediateRender:false},17);
+tl.to('#returnedLabel,#illustrationNote',{opacity:1,duration:.4},20.65);
+tl.to('#missingLabel',{opacity:1,duration:.4},26.3);
+window.__timelines=window.__timelines||{};
+window.__timelines.main=tl;
+drawParticles(0);
+</script></body></html>

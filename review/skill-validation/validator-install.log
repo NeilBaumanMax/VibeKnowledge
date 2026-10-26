@@ -1,0 +1,8 @@
+Collecting PyYAML
+  Downloading pyyaml-6.0.3-cp314-cp314-macosx_11_0_arm64.whl.metadata (2.4 kB)
+Downloading pyyaml-6.0.3-cp314-cp314-macosx_11_0_arm64.whl (173 kB)
+Installing collected packages: PyYAML
+Successfully installed PyYAML-6.0.3
+
+[notice] A new release of pip is available: 26.0.1 -> 26.2.2
+[notice] To update, run: /Users/neil/Documents/Project/Vibe_Knowledge/.venv/bin/python -m pip install --upgrade pip

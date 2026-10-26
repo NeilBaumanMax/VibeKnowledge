@@ -1,0 +1,107 @@
+{
+  "passed": true,
+  "duration": 30.0,
+  "width": 1920,
+  "height": 1080,
+  "frames": 900,
+  "fps": "30/1",
+  "video_codec": "h264",
+  "pixel_format": "yuv420p",
+  "audio_codec": "aac",
+  "audio_channels": 2,
+  "audio_sample_rate": "48000",
+  "size_bytes": 8363432,
+  "full_decode": "pass",
+  "sampled_frames": [
+    {
+      "time": 0,
+      "mean": 25.365542695473252,
+      "bright_pixels": 38615
+    },
+    {
+      "time": 1.6,
+      "mean": 25.787605774176956,
+      "bright_pixels": 39710
+    },
+    {
+      "time": 2.8,
+      "mean": 27.895975437242797,
+      "bright_pixels": 64477
+    },
+    {
+      "time": 5.5,
+      "mean": 25.269596514917694,
+      "bright_pixels": 37507
+    },
+    {
+      "time": 7.6,
+      "mean": 23.614905478395062,
+      "bright_pixels": 17226
+    },
+    {
+      "time": 9.5,
+      "mean": 24.43614085005144,
+      "bright_pixels": 28222
+    },
+    {
+      "time": 12.5,
+      "mean": 23.53705005787037,
+      "bright_pixels": 20501
+    },
+    {
+      "time": 14.8,
+      "mean": 23.188674768518517,
+      "bright_pixels": 17811
+    },
+    {
+      "time": 16.6,
+      "mean": 10.228326581790123,
+      "bright_pixels": 0
+    },
+    {
+      "time": 17,
+      "mean": 31.038214377572018,
+      "bright_pixels": 69941
+    },
+    {
+      "time": 17.5,
+      "mean": 26.594764017489712,
+      "bright_pixels": 59674
+    },
+    {
+      "time": 20,
+      "mean": 23.045723379629628,
+      "bright_pixels": 22724
+    },
+    {
+      "time": 22,
+      "mean": 23.577412872942386,
+      "bright_pixels": 28189
+    },
+    {
+      "time": 24.6,
+      "mean": 23.529645383230452,
+      "bright_pixels": 27465
+    },
+    {
+      "time": 25.2,
+      "mean": 24.885126350308642,
+      "bright_pixels": 40223
+    },
+    {
+      "time": 26.8,
+      "mean": 24.882613811728394,
+      "bright_pixels": 40158
+    },
+    {
+      "time": 28.4,
+      "mean": 24.86977784207819,
+      "bright_pixels": 37668
+    },
+    {
+      "time": 29.9666667,
+      "mean": 24.86888470936214,
+      "bright_pixels": 37668
+    }
+  ]
+}

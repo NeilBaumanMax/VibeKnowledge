@@ -1,0 +1,75 @@
+{
+  "synthetic_fixture_only": true,
+  "passed": 11,
+  "failed": 0,
+  "results": [
+    {
+      "action": "check",
+      "expected_success": false,
+      "exit_code": 1,
+      "message": "停止：当前脚本尚未获用户批准，或批准后已修改；停在脚本审核阶段"
+    },
+    {
+      "action": "approve-script",
+      "expected_success": true,
+      "exit_code": 0,
+      "message": "已记录：approve-script；当前阶段：preview_production"
+    },
+    {
+      "action": "check",
+      "expected_success": true,
+      "exit_code": 0,
+      "message": "preview 阶段允许继续；脚本、配乐及必要批准版本匹配。"
+    },
+    {
+      "action": "check",
+      "expected_success": false,
+      "exit_code": 1,
+      "message": "停止：缺少当前脚本的样片；先渲染并记录30秒样片"
+    },
+    {
+      "action": "record-preview",
+      "expected_success": true,
+      "exit_code": 0,
+      "message": "已记录：record-preview；当前阶段：preview_review"
+    },
+    {
+      "action": "check",
+      "expected_success": false,
+      "exit_code": 1,
+      "message": "停止：当前30秒样片尚未获用户批准；不能制作完整版"
+    },
+    {
+      "action": "approve-preview",
+      "expected_success": true,
+      "exit_code": 0,
+      "message": "已记录：approve-preview；当前阶段：full_production"
+    },
+    {
+      "action": "check",
+      "expected_success": true,
+      "exit_code": 0,
+      "message": "full 阶段允许继续；脚本、配乐及必要批准版本匹配。"
+    },
+    {
+      "action": "record-full",
+      "expected_success": true,
+      "exit_code": 0,
+      "message": "已记录：record-full；当前阶段：complete"
+    },
+    {
+      "action": "prepare-bgm-preview",
+      "passed": true,
+      "duration": 30,
+      "channels": 2,
+      "sample_rate": 48000
+    },
+    {
+      "action": "prepare-bgm-full",
+      "passed": true,
+      "duration": 78,
+      "channels": 2,
+      "sample_rate": 48000
+    }
+  ]
+}

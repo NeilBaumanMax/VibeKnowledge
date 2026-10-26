@@ -1,0 +1,206 @@
+{
+  "motion": {
+    "samples": 1200,
+    "successes": 12,
+    "stages": [
+      {
+        "time": 3.3,
+        "interval": 0.5,
+        "moving": 1199,
+        "total": 1200,
+        "meanDistancePx": 15.62464209339597,
+        "maxDistancePx": 30.279896831195153
+      },
+      {
+        "time": 5.4,
+        "interval": 0.5,
+        "moving": 1200,
+        "total": 1200,
+        "meanDistancePx": 26.757231588212946,
+        "maxDistancePx": 64.66701501079861
+      },
+      {
+        "time": 9.6,
+        "interval": 0.5,
+        "moving": 1198,
+        "total": 1200,
+        "meanDistancePx": 11.479895122454542,
+        "maxDistancePx": 25.527576387900208
+      },
+      {
+        "time": 12.1,
+        "interval": 0.5,
+        "moving": 1199,
+        "total": 1200,
+        "meanDistancePx": 12.30956916601048,
+        "maxDistancePx": 25.537370484076536
+      },
+      {
+        "time": 14.6,
+        "interval": 0.5,
+        "moving": 1199,
+        "total": 1200,
+        "meanDistancePx": 11.645547755571345,
+        "maxDistancePx": 25.181782355753388
+      }
+    ],
+    "selection": [
+      {
+        "time": 3.3,
+        "gold": 12,
+        "gray": 0
+      },
+      {
+        "time": 5.5,
+        "gold": 12,
+        "gray": 0
+      },
+      {
+        "time": 9.5,
+        "gold": 12,
+        "gray": 0
+      },
+      {
+        "time": 12.5,
+        "gold": 12,
+        "gray": 0
+      },
+      {
+        "time": 14.8,
+        "gold": 12,
+        "gray": 0
+      },
+      {
+        "time": 17.5,
+        "gold": 12,
+        "gray": 1188
+      }
+    ],
+    "continuity": [
+      {
+        "time": 1.5,
+        "maxPerFramePx": 19.61780167222186
+      },
+      {
+        "time": 3.2,
+        "maxPerFramePx": 2.0872700631754344
+      },
+      {
+        "time": 5.5,
+        "maxPerFramePx": 4.3434478166656705
+      },
+      {
+        "time": 7.3,
+        "maxPerFramePx": 21.72917597820521
+      },
+      {
+        "time": 9.5,
+        "maxPerFramePx": 1.6866112010790695
+      },
+      {
+        "time": 14,
+        "maxPerFramePx": 1.73596080683636
+      },
+      {
+        "time": 17.5,
+        "maxPerFramePx": 2.5307222993159204
+      }
+    ]
+  },
+  "aircraftSourceUnchanged": true,
+  "aircraftHash": "2e398330eca7f8e0e48e77a35fe9faa7bebb156399fd278d3c62ff24ea023004",
+  "reading": [
+    {
+      "id": "hook",
+      "line": "你看到的成功",
+      "start": 0,
+      "lastGlyphSettled": 0.585,
+      "wholeLineHold": 3.255
+    },
+    {
+      "id": "reverse",
+      "line": "其实筛掉了无数失败",
+      "start": 2,
+      "lastGlyphSettled": 2.6599999999999997,
+      "wholeLineHold": 1.18
+    },
+    {
+      "id": "question",
+      "line": "为什么成功经验",
+      "start": 4,
+      "lastGlyphSettled": 4.630000000000001,
+      "wholeLineHold": 2.51
+    },
+    {
+      "id": "question",
+      "line": "常常会误导你？",
+      "start": 4.4,
+      "lastGlyphSettled": 5.030000000000001,
+      "wholeLineHold": 2.1099999999999994
+    },
+    {
+      "id": "incomplete",
+      "line": "因为你看到的……",
+      "start": 7.3,
+      "lastGlyphSettled": 7.96,
+      "wholeLineHold": 3.180000000000001
+    },
+    {
+      "id": "incomplete",
+      "line": "从来不是全部",
+      "start": 9,
+      "lastGlyphSettled": 9.584999999999999,
+      "wholeLineHold": 1.5550000000000006
+    },
+    {
+      "id": "method",
+      "line": "同样尝试，也有人失败",
+      "start": 11.3,
+      "lastGlyphSettled": 11.96,
+      "wholeLineHold": 1.5799999999999985
+    },
+    {
+      "id": "inference",
+      "line": "但你只听到了成功",
+      "start": 13.7,
+      "lastGlyphSettled": 14.36,
+      "wholeLineHold": 1.68
+    },
+    {
+      "id": "reveal",
+      "line": "幸存者偏差",
+      "start": 17,
+      "lastGlyphSettled": 17.35,
+      "wholeLineHold": 1.9899999999999998
+    },
+    {
+      "id": "aircraft",
+      "line": "二战：只统计返航飞机",
+      "start": 19.5,
+      "lastGlyphSettled": 20.16,
+      "wholeLineHold": 1.9800000000000006
+    },
+    {
+      "id": "wrong",
+      "line": "弹孔多，就先加固？",
+      "start": 22.3,
+      "lastGlyphSettled": 22.96,
+      "wholeLineHold": 1.68
+    },
+    {
+      "id": "consequence",
+      "line": "关键部位中弹，可能难以返航",
+      "start": 24.95,
+      "lastGlyphSettled": 25.61,
+      "wholeLineHold": 1.6299999999999992
+    },
+    {
+      "id": "conclusion",
+      "line": "只看幸存者，就漏掉了全貌",
+      "start": 27.4,
+      "lastGlyphSettled": 28.06,
+      "wholeLineHold": 1.7800000000000014
+    }
+  ],
+  "v2MeanDisplacementAt54to59": 0
+}

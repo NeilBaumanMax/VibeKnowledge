@@ -1,0 +1,327 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=1920,height=1080"><title>幸存者偏差 · Vibe 知识大赏</title><script src="assets/vendor/gsap.min.js"></script><style>@font-face{font-family:Display;src:url('assets/fonts/display.woff2')}@font-face{font-family:Body;src:url('assets/fonts/body.woff2')}
+:root{--bg:#07090e;--ink:#f3eee4;--gold:#e8c985;--red:#ed8174;--muted:#9da8b5}
+*{margin:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:var(--bg)}
+#root{position:relative;width:100%;height:100%;background:var(--bg);color:var(--ink);font-family:Body,sans-serif}
+#universe{position:absolute;inset:0;width:100%;height:100%}.clip{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.caption{position:absolute;left:120px;right:120px;font-family:Display,sans-serif;font-size:70px;line-height:1.4;letter-spacing:2px;opacity:1}
+.caption p{white-space:nowrap;opacity:1}.gold{color:var(--gold)}.red{color:var(--red)}
+.hook .caption{top:210px;left:128px;font-size:112px;letter-spacing:1px;right:auto}.reverse .caption{top:370px;left:130px;font-size:80px;right:auto}
+.lower .caption{top:110px;left:130px;text-align:left;font-size:60px;line-height:1.45}
+#question .caption{top:790px;text-align:center;left:120px;font-size:54px;line-height:1.35}
+#incomplete .caption{top:110px;font-size:68px}
+.top .caption{top:135px;font-size:66px;text-align:center}
+.reveal .caption{top:353px;text-align:center;font-size:150px;letter-spacing:9px;color:var(--gold)}
+.reveal .english{font-family:Body,sans-serif;font-size:30px;letter-spacing:12px;margin-top:24px;color:var(--ink);opacity:0}
+.tag{position:absolute;color:var(--gold);font:43px Display,sans-serif;letter-spacing:1px;opacity:0}
+#tag1{left:950px;top:322px}#tag2{left:1180px;top:322px}#tag3{left:1410px;top:322px}
+.scene-note{position:absolute;font:30px Body,sans-serif;color:#c1c9d5;opacity:0;letter-spacing:2px}
+#returnedLabel{left:1134px;top:351px;color:var(--gold);font-size:34px}
+#missingLabel{left:410px;top:792px;font-size:34px}
+#illustrationNote{left:1134px;top:900px;font-size:28px;color:#a9b4c4}
+#experimentHint{left:430px;top:925px;font-size:28px;color:#a9b4c4}
+#flash{position:absolute;inset:0;background:#e8c985;opacity:0;pointer-events:none}
+/* Review fixes: reserve negative space around reading text. */
+.muted{color:#a5b0c0}
+#question .caption{top:130px;text-align:left;left:130px;font-size:64px;line-height:1.42}
+.reveal .caption{top:155px}
+#missingLabel{top:760px}
+
+#tag1{left:860px}#tag2{left:1130px}#tag3{left:1450px}
+
+/* Every character rises behind its own baseline mask. */
+.char-mask{display:inline-block;overflow:hidden;vertical-align:bottom;height:1.4em;line-height:1.4em}
+.glyph{display:inline-block;will-change:transform;opacity:0}
+
+.ending .caption{top:220px;text-align:center;font-size:88px;line-height:1.65;letter-spacing:3px}
+#ending .caption p:nth-child(2){color:var(--gold)}
+</style></head><body><div id="root" data-composition-id="main" data-start="0" data-duration="78" data-width="1920" data-height="1080" data-fps="30">
+<canvas id="universe" width="1920" height="1080" data-layout-ignore="true"></canvas>
+<div id="tag1" class="tag">考研上岸</div><div id="tag2" class="tag">创业成功</div><div id="tag3" class="tag">年入百万</div>
+<div id="returnedLabel" class="scene-note">返航样本</div><div id="missingLabel" class="scene-note">未进入统计</div><div id="illustrationNote" class="scene-note">二战飞机 · 原理示意</div>
+<section class="clip hook" id="hook" data-start="0" data-duration="4.000000" data-track-index="2"><div class="caption"><p><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">你</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">看</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">到</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">的</span></span><span class="char-mask gold"><span class="glyph" data-layout-allow-overflow="true">成</span></span><span class="char-mask gold"><span class="glyph" data-layout-allow-overflow="true">功</span></span></p></div></section>
+<section class="clip reverse" id="reverse" data-start="2" data-duration="2.000000" data-track-index="2"><div class="caption"><p><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">其</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">实</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">筛</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">掉</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">了</span></span><span class="char-mask muted"><span class="glyph" data-layout-allow-overflow="true">无</span></span><span class="char-mask muted"><span class="glyph" data-layout-allow-overflow="true">数</span></span><span class="char-mask muted"><span class="glyph" data-layout-allow-overflow="true">失</span></span><span class="char-mask muted"><span class="glyph" data-layout-allow-overflow="true">败</span></span></p></div></section>
+<section class="clip lower" id="question" data-start="4" data-duration="3.300000" data-track-index="2"><div class="caption"><p><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">为</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">什</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">么</span></span><span class="char-mask gold"><span class="glyph" data-layout-allow-overflow="true">成</span></span><span class="char-mask gold"><span class="glyph" data-layout-allow-overflow="true">功</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">经</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">验</span></span></p><p><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">常</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">常</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">会</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">误</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">导</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">你</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">？</span></span></p></div></section>
+<section class="clip lower" id="incomplete" data-start="7.3" data-duration="4.000000" data-track-index="2"><div class="caption"><p><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">因</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">为</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">你</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">看</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">到</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">的</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">…</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">…</span></span></p><p><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">从</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">来</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">不</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">是</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">全</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">部</span></span></p></div></section>
+<section class="clip top" id="method" data-start="11.3" data-duration="2.400000" data-track-index="2"><div class="caption"><p><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">同</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">一</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">种</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">方</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">法</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">，</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">也</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">有</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">人</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">失</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">败</span></span></p></div></section>
+<section class="clip top" id="inference" data-start="13.7" data-duration="2.500000" data-track-index="2"><div class="caption"><p><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">你</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">却</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">只</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">看</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">见</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">了</span></span><span class="char-mask gold"><span class="glyph" data-layout-allow-overflow="true">成</span></span><span class="char-mask gold"><span class="glyph" data-layout-allow-overflow="true">功</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">者</span></span></p></div></section>
+<section class="clip reveal" id="reveal" data-start="17" data-duration="2.500000" data-track-index="2"><div class="caption"><p><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">幸</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">存</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">者</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">偏</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">差</span></span></p><div class="english">SURVIVORSHIP BIAS</div></div></section>
+<section class="clip top" id="aircraft" data-start="19.5" data-duration="2.800000" data-track-index="2"><div class="caption"><p><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">二</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">战</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">：</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">只</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">统</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">计</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">返</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">航</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">飞</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">机</span></span></p></div></section>
+<section class="clip top" id="wrong" data-start="22.3" data-duration="2.500000" data-track-index="2"><div class="caption"><p><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">弹</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">孔</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">多</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">，</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">就</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">先</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">加</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">固</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">？</span></span></p></div></section>
+<section class="clip top" id="consequence" data-start="24.8" data-duration="2.600000" data-track-index="2"><div class="caption"><p><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">关</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">键</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">部</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">位</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">中</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">弹</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">，</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">可</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">能</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">难</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">以</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">返</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">航</span></span></p></div></section>
+<section class="clip top" id="missing" data-start="27.4" data-duration="2.333333" data-track-index="2"><div class="caption"><p><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">没</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">回</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">来</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">的</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">，</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">没</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">进</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">入</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">统</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">计</span></span></p></div></section>
+<section class="clip top" id="wald" data-start="29.733333" data-duration="4.200000" data-track-index="2"><div class="caption" data-hold><p><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">W</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">a</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">l</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">d</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">研</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">究</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">的</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">是</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">中</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">弹</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">后</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">的</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">风</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">险</span></span></p></div></section>
+<section class="clip top" id="armor" data-start="33.933333" data-duration="3.566667" data-track-index="2"><div class="caption"><p><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">要</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">保</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">护</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">的</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">，</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">是</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">致</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">命</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">薄</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">弱</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">处</span></span></p></div></section>
+<section class="clip top" id="caution" data-start="37.5" data-duration="3.833333" data-track-index="2"><div class="caption"><p><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">弹</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">孔</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">少</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">，</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">不</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">自</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">动</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">等</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">于</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">危</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">险</span></span></p></div></section>
+<section class="clip top" id="realworld" data-start="41.333333" data-duration="3.466667" data-track-index="2"><div class="caption"><p><span class="char-mask gold"><span class="glyph" data-layout-allow-overflow="true">成</span></span><span class="char-mask gold"><span class="glyph" data-layout-allow-overflow="true">功</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">经</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">验</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">，</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">也</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">有</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">同</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">样</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">的</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">问</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">题</span></span></p></div></section>
+<section class="clip top" id="try_success" data-start="44.8" data-duration="3.466667" data-track-index="2"><div class="caption"><p><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">有</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">人</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">照</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">做</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">，</span></span><span class="char-mask gold"><span class="glyph" data-layout-allow-overflow="true">成</span></span><span class="char-mask gold"><span class="glyph" data-layout-allow-overflow="true">功</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">了</span></span></p></div></section>
+<section class="clip top" id="try_failure" data-start="48.266667" data-duration="3.433333" data-track-index="2"><div class="caption"><p><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">也</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">有</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">人</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">照</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">做</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">，</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">却</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">失</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">败</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">了</span></span></p></div></section>
+<section class="clip top" id="overestimate" data-start="51.7" data-duration="3.500000" data-track-index="2"><div class="caption"><p><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">只</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">听</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">前</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">者</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">，</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">就</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">会</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">高</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">估</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">方</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">法</span></span></p></div></section>
+<section class="clip top" id="reference" data-start="55.2" data-duration="3.500000" data-track-index="2"><div class="caption"><p><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">经</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">验</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">可</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">以</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">参</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">考</span></span></p></div></section>
+<section class="clip top" id="whole" data-start="58.7" data-duration="3.166667" data-track-index="2"><div class="caption"><p><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">有</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">效</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">与</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">否</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">，</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">要</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">看</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">完</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">整</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">样</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">本</span></span></p></div></section>
+<section class="clip top" id="ask_missing" data-start="61.866667" data-duration="3.533333" data-track-index="2"><div class="caption"><p><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">先</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">问</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">：</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">失</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">败</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">的</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">人</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">去</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">了</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">哪</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">里</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">？</span></span></p></div></section>
+<section class="clip top" id="ask_conditions" data-start="65.4" data-duration="3.400000" data-track-index="2"><div class="caption"><p><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">再</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">问</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">：</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">条</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">件</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">真</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">的</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">一</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">样</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">吗</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">？</span></span></p></div></section>
+<section class="clip ending" id="ending" data-start="68.8" data-duration="9.200000" data-track-index="2"><div class="caption" data-hold><p><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">你</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">看</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">到</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">的</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">经</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">验</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">，</span></span></p><p><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">可</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">能</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">只</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">是</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">幸</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">存</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">者</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">的</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">回</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">声</span></span><span class="char-mask"><span class="glyph" data-layout-allow-overflow="true">。</span></span></p></div></section>
+<div id="flash" data-layout-ignore="true"></div>
+<audio id="score" src="assets/audio/score-full.wav" data-start="0" data-duration="78" data-track-index="0" data-volume="1"></audio>
+</div><script>const CONFIG={"duration":78,"outputDir":"output/完整版","subtitleFile":"幸存者偏差_完整版_字幕.srt","csvFile":"docs/11_完整版字幕时间轴.csv","planFile":"docs/10_完整版制作方案.md","audioFile":"assets/audio/score-full.wav","realWorldStart":41.3333333333,"endingStart":68.8};const AUDIO_ONSETS=[0.21315192743763967,0.5024943310657575,0.7918367346938755,1.0811791383219935,1.370521541950111,1.6598639455782291,1.9492063492063472,2.238548752834465,2.532879818594103,2.8272108843537396,3.106575963718819,3.395918367346937,3.685260770975055,3.974603174603173,4.263945578231291,4.558276643990928,4.847619047619046,5.131972789115645,5.4263038548752816,5.720634920634919,6.004988662131518,6.294331065759636,6.5786848072562325,6.87301587301587,7.157369614512469,7.451700680272106,7.736054421768705,8.030385487528342,8.31473922902494,8.614058956916097,8.898412698412695,9.182766439909294,9.477097505668931,9.76643990929705,10.055782312925167,10.365079365079362,10.584580498866211,10.92879818594104,11.243083900226754,11.522448979591834,11.801814058956914,12.016326530612242,12.37551020408163,12.684807256235825,12.964172335600905,13.253514739229022,13.458049886621312,13.777324263038546,14.176417233560088,14.395918367346937,14.685260770975056,14.954648526077097,15.26394557823129,15.648072562358276,15.857596371882085,16.18185941043084,16.570975056689342,16.78049886621315,17,17.294331065759636,17.578684807256234,17.868027210884353,18.16235827664399,18.451700680272108,18.736054421768706,19.025396825396825,19.31972789115646,19.60907029478458,19.8984126984127,20.182766439909297,20.477097505668933,20.766439909297052,21.05578231292517,21.39501133786848,21.634467120181405,21.923809523809524,22.208163265306123,22.50249433106576,22.791836734693877,23.081179138321996,23.365532879818595,23.65487528344671,23.94920634920635,24.238548752834465,24.527891156462584,24.812244897959182,25.10657596371882,25.400907029478457,25.685260770975056,26.019501133786846,26.26394557823129,26.55328798185941,26.847619047619048,27.131972789115647,27.426303854875282,27.70566893424036,28,28.28934240362812,28.583673469387755,28.868027210884353,29.16235827664399,29.44172335600907,29.736054421768706,30.030385487528346,30.31972789115646,30.643990929705215,30.898412698412695,31.187755102040814,31.472108843537416,31.761451247165535,32.055782312925174,32.345124716553286,32.6344671201814,32.918820861678,33.208163265306126];const CAPTIONS=[{"id":"hook","start":0,"end":4,"kind":"hook","lines":["你看到的成功"],"lineDelays":[0]},{"id":"reverse","start":2,"end":4,"kind":"reverse","lines":["其实筛掉了无数失败"],"lineDelays":[0]},{"id":"question","start":4,"end":7.3,"kind":"lower","lines":["为什么成功经验","常常会误导你？"],"lineDelays":[0,0.4]},{"id":"incomplete","start":7.3,"end":11.3,"kind":"lower","lines":["因为你看到的……","从来不是全部"],"lineDelays":[0,1.7]},{"id":"method","start":11.3,"end":13.7,"kind":"top","lines":["同一种方法，也有人失败"],"lineDelays":[0]},{"id":"inference","start":13.7,"end":16.2,"kind":"top","lines":["你却只看见了成功者"],"lineDelays":[0]},{"id":"reveal","start":17,"end":19.5,"kind":"reveal","lines":["幸存者偏差"],"lineDelays":[0],"english":"SURVIVORSHIP BIAS"},{"id":"aircraft","start":19.5,"end":22.3,"kind":"top","lines":["二战：只统计返航飞机"],"lineDelays":[0]},{"id":"wrong","start":22.3,"end":24.8,"kind":"top","lines":["弹孔多，就先加固？"],"lineDelays":[0]},{"id":"consequence","start":24.8,"end":27.4,"kind":"top","lines":["关键部位中弹，可能难以返航"],"lineDelays":[0.15]},{"id":"missing","start":27.4,"end":29.733333,"kind":"top","lines":["没回来的，没进入统计"],"lineDelays":[0]},{"id":"wald","start":29.733333,"end":33.933333,"kind":"top","lines":["Wald研究的是中弹后的风险"],"lineDelays":[0]},{"id":"armor","start":33.933333,"end":37.5,"kind":"top","lines":["要保护的，是致命薄弱处"],"lineDelays":[0]},{"id":"caution","start":37.5,"end":41.333333,"kind":"top","lines":["弹孔少，不自动等于危险"],"lineDelays":[0]},{"id":"realworld","start":41.333333,"end":44.8,"kind":"top","lines":["成功经验，也有同样的问题"],"lineDelays":[0]},{"id":"try_success","start":44.8,"end":48.266667,"kind":"top","lines":["有人照做，成功了"],"lineDelays":[0]},{"id":"try_failure","start":48.266667,"end":51.7,"kind":"top","lines":["也有人照做，却失败了"],"lineDelays":[0]},{"id":"overestimate","start":51.7,"end":55.2,"kind":"top","lines":["只听前者，就会高估方法"],"lineDelays":[0]},{"id":"reference","start":55.2,"end":58.7,"kind":"top","lines":["经验可以参考"],"lineDelays":[0]},{"id":"whole","start":58.7,"end":61.866667,"kind":"top","lines":["有效与否，要看完整样本"],"lineDelays":[0]},{"id":"ask_missing","start":61.866667,"end":65.4,"kind":"top","lines":["先问：失败的人去了哪里？"],"lineDelays":[0]},{"id":"ask_conditions","start":65.4,"end":68.8,"kind":"top","lines":["再问：条件真的一样吗？"],"lineDelays":[0]},{"id":"ending","start":68.8,"end":78,"kind":"ending","lines":["你看到的经验，","可能只是幸存者的回声。"],"lineDelays":[0,4.066667]}];// Purpose-drawn twin-engine aircraft. Not a historical aircraft model or dataset.
+const AIRFRAME_PATH='M500 18 C476 20 472 63 470 110 L464 212 L72 355 L54 410 L463 325 L476 477 L322 545 L321 581 L484 557 L500 590 L516 557 L679 581 L678 545 L524 477 L537 325 L946 410 L928 355 L536 212 L530 110 C528 63 524 20 500 18 Z';
+let holesCache;
+function holePositions(){
+ if(holesCache)return holesCache;
+ const test=document.createElement('canvas').getContext('2d');const path=new Path2D(AIRFRAME_PATH);let out=[];
+ for(const side of [-1,1])for(const tail of [false,true]){
+  const count=tail?8:23;let j=0,n=0;
+  while(n<count&&j<10000){j++;let u=seeded(j+(tail?932:43)),v=seeded(j+(tail?1921:559));
+   let x=500+side*(tail?40+u*145:85+u*345),y=tail?495+v*82:245+v*155;
+   let engine=(x>319&&x<385||x>615&&x<681)&&y<367;
+   if(!engine&&test.isPointInPath(path,x,y)){out.push({x,y});n++;}
+  }
+ }
+ holesCache=out;return out;
+}
+function paintAircraft(x,y,scale,color,hits,critical=0,rotation=0){
+ ctx.save();ctx.translate(x,y);ctx.rotate(rotation);ctx.scale(scale,scale);ctx.translate(-500,-300);
+ const path=new Path2D(AIRFRAME_PATH);ctx.fillStyle=color==='#e8c985'?'#182028':'#101923';ctx.fill(path);ctx.strokeStyle=color;ctx.lineWidth=3;ctx.stroke(path);
+ ctx.globalAlpha*=.65;line(500,40,500,565,color,1.2);line(80,384,463,274,color,1.2);line(920,384,537,274,color,1.2);ctx.globalAlpha/=.65;
+ ctx.strokeStyle=color;ctx.lineWidth=2.5;ctx.beginPath();ctx.roundRect(332,208,40,145,18);ctx.roundRect(628,208,40,145,18);ctx.stroke();line(306,221,398,221,color,2.5);line(602,221,694,221,color,2.5);
+ ctx.beginPath();ctx.moveTo(478,88);ctx.quadraticCurveTo(500,62,522,88);ctx.lineTo(525,130);ctx.quadraticCurveTo(500,111,475,130);ctx.closePath();ctx.stroke();
+ for(let i=0;i<holePositions().length;i++){const p=holePositions()[i],a=clamp(hits*holePositions().length-i);if(a<=0)continue;ctx.save();ctx.globalAlpha*=a;ctx.fillStyle='#ed8174';ctx.beginPath();ctx.arc(p.x,p.y,4.2,0,Math.PI*2);ctx.fill();ctx.restore();}
+ if(critical>0){ctx.save();ctx.globalAlpha*=critical;ctx.strokeStyle='#ed8174';ctx.lineWidth=4;ctx.beginPath();ctx.roundRect(322,194,60,173,22);ctx.stroke();ctx.fillStyle='#ed8174';ctx.beginPath();ctx.arc(351,265,11,0,Math.PI*2);ctx.fill();ctx.restore();}
+ ctx.restore();
+}
+function drawAircraftExperiment(t,opacity=1){
+ const appear=smooth(19.15,19.55,t);ctx.save();ctx.globalAlpha=appear*opacity;
+ // This aircraft visibly crosses the observation boundary before its damage is tallied.
+ const arrival=smooth(19.45,20.7,t);const px=mix(560,1420,arrival),py=mix(590,610,arrival),sc=mix(.29,.61,arrival);
+ routeCurve(400,590,1420,610,'#a4b2c4',.27);
+ const returned=arrival>.9;
+ paintAircraft(px,py,sc,returned?'#e8c985':'#d0d5dd',smooth(20.75,21.8,t),0,(1-arrival)*Math.PI*.5);
+ if(t>=20.8){ctx.save();ctx.strokeStyle='#e8c985';ctx.lineWidth=1.5;ctx.globalAlpha=.5*opacity*(1-smooth(27.4,28,t));for(let yy of [822,836,850])line(1280,yy,1560,yy,'#e8c985',1);ctx.restore();sampleMark(1690,380,true,13,.9);}
+ // Tempting hypothesis is shown, held, then withdrawn after the missing case arrives.
+ const hypothesis=smooth(22.4,22.9,t)*(1-smooth(24.8,25.1,t));
+ if(hypothesis>0){ctx.save();ctx.globalAlpha=hypothesis*.65*opacity;ctx.translate(1420,610);ctx.scale(.61,.61);ctx.translate(-500,-300);ctx.strokeStyle='#ed8174';ctx.lineWidth=3;ctx.setLineDash([12,10]);ctx.beginPath();ctx.moveTo(95,362);ctx.lineTo(430,250);ctx.lineTo(435,320);ctx.lineTo(85,394);ctx.closePath();ctx.moveTo(905,362);ctx.lineTo(570,250);ctx.lineTo(565,320);ctx.lineTo(915,394);ctx.closePath();ctx.stroke();ctx.restore();}
+ // A second aircraft follows the same prospective return route, but stops short after an engine hit.
+ if(t>=24.7){const enter=smooth(24.7,25.05,t),hit=smooth(25.05,25.17,t),fall=smooth(25.35,26.8,t);let x=mix(500,660,fall),y=mix(545,650,fall);ctx.save();ctx.globalAlpha=enter*opacity;
+  ctx.save();ctx.strokeStyle='#8794a6';ctx.setLineDash([9,12]);ctx.globalAlpha=.38*opacity;ctx.lineWidth=1.7;ctx.beginPath();ctx.moveTo(520,550);ctx.bezierCurveTo(760,550,930,610,1080,610);ctx.stroke();ctx.restore();
+  paintAircraft(x,y,.50,fall>.15?'#8b98ab':'#d0d5dd',0,hit,fall*-.12);
+  if(hit>0){const hx=x-149*.5,hy=y-35*.5;const travel=smooth(24.78,25.06,t);line(mix(240,hx,travel),mix(360,hy,travel),hx,hy,'#ed8174',2);ring(hx,hy,14+clamp((t-25.06)/.55)*40,Math.max(0,1-(t-25.06)/.65),'#ed8174');}
+  // Interrupted path curves down; the failed aircraft stays visible, outside the sample window.
+  if(fall>0){ctx.save();ctx.globalAlpha=.5*opacity;routeCurve(500,545,x,y,'#8b98ab',fall);ctx.restore();}
+  if(t>26.3)sampleMark(920,640,false,13,smooth(26.3,26.6,t));
+  ctx.restore();
+ }
+ // At the close, planes retain their outcomes and visually reconnect with the original cohorts.
+ if(t>=27.4){const a=smooth(27.4,28.3,t);routeCurve(660,750,600,880,'#8b98ab',a*.5);routeCurve(1420,790,1390,850,'#e8c985',a*.5);}
+ ctx.restore();
+}
+
+// Stable sample identities. Camera/observation changes never delete failed cases.
+const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v));
+const smooth=(a,b,t)=>{let u=clamp((t-a)/(b-a));return u*u*(3-2*u)};
+const mix=(a,b,u)=>a+(b-a)*u;
+function seeded(n){const x=Math.sin(n*127.1+311.7)*43758.5453123;return x-Math.floor(x)}
+const dots=Array.from({length:1200},(_,i)=>{
+ const gold=i<12,k=i-12,layer=i%3;
+ return {id:i,gold,z:layer,x:gold?1125+(i%3)*145:310+(k%34)*42+(layer-1)*6,y:gold?460+Math.floor(i/3)*39:685+Math.floor(k/34)*18+(layer-1)*7};
+});
+const dotCanvas=document.getElementById('universe'),ctx=dotCanvas.getContext('2d');
+function line(x,y,x2,y2,c,w=1){ctx.strokeStyle=c;ctx.lineWidth=w;ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x2,y2);ctx.stroke()}
+function ring(x,y,r,a,c='#e8c985'){ctx.save();ctx.globalAlpha*=a;ctx.strokeStyle=c;ctx.lineWidth=1.2;ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.stroke();ctx.restore()}
+function sampleMark(x,y,success,r,alpha=1){ctx.save();ctx.translate(x,y);ctx.globalAlpha*=alpha;ctx.strokeStyle=success?'#e8c985':'#8794a6';ctx.fillStyle=success?'#e8c985':'#8794a6';ctx.lineWidth=1.3;
+ ctx.beginPath();ctx.arc(0,0,r,0,Math.PI*2);ctx.globalAlpha*=.16;ctx.fill();ctx.globalAlpha/=.16;ctx.stroke();
+ ctx.beginPath();if(success){ctx.moveTo(-r*.48,0);ctx.lineTo(-r*.12,r*.35);ctx.lineTo(r*.50,-r*.34)}else{ctx.moveTo(-r*.32,-r*.32);ctx.lineTo(r*.32,r*.32);ctx.moveTo(r*.32,-r*.32);ctx.lineTo(-r*.32,r*.32)}ctx.stroke();ctx.restore();}
+function cameraAt(t){let z=1+.38*smooth(.35,1.6,t)-.38*smooth(2,3.2,t)+1.1*smooth(3.9,4.8,t)-1.25*smooth(7,9.2,t);return {z,y:smooth(16.95,17.5,t)*120*(1-smooth(18.9,19.5,t))};}
+// Persistent identities travel through a coherent current; no per-frame randomness.
+function worldSample(p,t){
+ const id=p.id, phase=seeded(id+73)*Math.PI*2;
+ const u=p.gold?(id+.5)/12:seeded(id+11),v=seeded(id+27);
+ const depth=.55+seeded(id+91)*.8;
+ const x=90+1740*u+Math.sin(t*.64+v*5)*65*depth;
+ const y=695+v*225+Math.sin(u*8-t*.92)*20*depth+Math.sin(t*.43+phase)*8;
+ if(!p.gold)return {x,y,depth};
+ // The selected cases are drawn out of the population toward public attention.
+ const select=smooth(.05+(id%3)*.08,1.55+(id%3)*.08,t);
+ const gx=p.x+Math.sin(t*.9+phase)*19,gy=p.y+Math.cos(t*.78+phase)*11;
+ return {x:mix(x,gx,select),y:mix(y,gy,select),depth:1};
+}
+function samplePose(p,t){
+ const c=cameraAt(t),q=worldSample(p,t),reveal=smooth(17,17.32,t)*(1-smooth(17.32,18.55,t));
+ const depth=q.depth;
+ return {x:1320+(q.x-1320)*c.z+(q.x-1100)*reveal*.015,
+ y:500+(q.y-500)*c.z+c.y+Math.sin(q.x*.006-t*2)*reveal*18,
+ r:(p.gold?5.4:1.6+depth*.9)*c.z,depth};
+}
+function drawFlowSample(p,t,alpha){
+ const q=samplePose(p,t),prev=samplePose(p,Math.max(0,t-.18));
+ ctx.save();ctx.globalAlpha*=alpha;
+ const color=p.gold?'#ebcb83':'#8d9eaf';
+ const speed=Math.hypot(q.x-prev.x,q.y-prev.y);
+ // Short trails reveal actual sample trajectories; they do not create new samples.
+ if(speed>1.4){ctx.strokeStyle=color;ctx.lineWidth=Math.max(.65,q.r*.38);ctx.globalAlpha*=p.gold?.40:.25;
+ ctx.beginPath();ctx.moveTo(prev.x,prev.y);ctx.lineTo(q.x,q.y);ctx.stroke();ctx.globalAlpha/=(p.gold?.40:.25);}
+ if(p.gold){const glow=ctx.createRadialGradient(q.x,q.y,0,q.x,q.y,q.r*6);glow.addColorStop(0,'rgba(232,201,133,.40)');glow.addColorStop(.3,'rgba(232,201,133,.12)');glow.addColorStop(1,'rgba(232,201,133,0)');ctx.fillStyle=glow;ctx.beginPath();ctx.arc(q.x,q.y,q.r*6,0,Math.PI*2);ctx.fill();}
+ ctx.fillStyle=color;ctx.beginPath();ctx.arc(q.x,q.y,q.r,0,Math.PI*2);ctx.fill();
+ // Result symbols only become visible in a close view; the distant population remains a light field.
+ if(p.gold&&t>1.65&&q.r>7){ctx.strokeStyle='#fff1cd';ctx.lineWidth=1.15;ctx.beginPath();ctx.moveTo(q.x-3,q.y);ctx.lineTo(q.x-1,q.y+2);ctx.lineTo(q.x+3,q.y-2);ctx.stroke();}
+ ctx.restore();
+}
+function windowPose(t){const c=cameraAt(t);let box={x:1320+(1055-1320)*c.z,y:500+(406-500)*c.z+c.y,w:475*c.z,h:233*c.z};
+ const reveal=smooth(17,17.5,t);for(const [k,v] of Object.entries({x:120,y:490,w:1740,h:530}))box[k]=mix(box[k],v,reveal);
+ const aircraft=smooth(18.95,19.8,t);for(const [k,v] of Object.entries({x:1080,y:330,w:680,h:550}))box[k]=mix(box[k],v,aircraft);
+ return box;
+}
+function observationWindow(t,alpha){const b=windowPose(t);ctx.save();ctx.globalAlpha*=alpha;ctx.strokeStyle='#e8c985';ctx.lineWidth=1.8;ctx.strokeRect(b.x,b.y,b.w,b.h);
+ // Four lens corners communicate an observation boundary, not a physical barrier.
+ for(const [x,y,sx,sy] of [[b.x,b.y,1,1],[b.x+b.w,b.y,-1,1],[b.x,b.y+b.h,1,-1],[b.x+b.w,b.y+b.h,-1,-1]]){line(x,y,x+sx*25,y,'#e8c985',3);line(x,y,x,y+sy*25,'#e8c985',3)}ctx.restore();}
+function routeCurve(x0,y0,x1,y1,color,alpha){ctx.save();ctx.globalAlpha*=alpha;ctx.strokeStyle=color;ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(x0,y0);ctx.bezierCurveTo(x0+240,y0,x1-280,y1,x1,y1);ctx.stroke();ctx.restore()}
+function drawParticles(t){
+ ctx.clearRect(0,0,1920,1080);ctx.fillStyle='#07090e';ctx.fillRect(0,0,1920,1080);
+ const hush=1-.98*smooth(16.2,16.75,t)*(1-smooth(17,17.12,t));
+ const bg=ctx.createRadialGradient(1300,490,50,1000,540,1100);bg.addColorStop(0,'#192431');bg.addColorStop(.6,'#0c131e');bg.addColorStop(1,'#06090e');ctx.globalAlpha=hush;ctx.fillStyle=bg;ctx.fillRect(0,0,1920,1080);
+ if(t>=CONFIG.realWorldStart){drawReality(t);ctx.globalAlpha=1;return;}
+ // A broad population current occupies the lower depth field, leaving the type clear.
+ if(t>=19.15){ctx.save();ctx.globalAlpha=.10*hush;for(let i=-6;i<=6;i++)line(960+i*80,400,960+i*330,1080,'#7e8c9e',.7);for(let i=0;i<9;i++){let y=420+i*i*9;line(80,y,1840,y,'#7e8c9e',.7)}ctx.restore();}
+ const sampleAlpha=(1-smooth(19,19.9,t))*hush;
+ ctx.save();ctx.globalAlpha=sampleAlpha;
+ // Far cases are painted first; nearer layers have larger cores and stronger motion.
+ if(sampleAlpha>.0001)for(const p of dots){const a=p.gold?.98:(.25+seeded(p.id+91)*.39);drawFlowSample(p,Math.min(t,18.9),a);}
+ ctx.restore();
+ observationWindow(t,hush*(t<19.5?.7:1));
+ drawSampleMeanings(t,hush);
+ if(t>=19.15)drawAircraftExperiment(Math.min(t,27.35));
+ if(t>=27.4)drawAircraftReasoning(t);
+ ctx.globalAlpha=1;
+}
+
+// In-scene labels establish the visual vocabulary before asking viewers to infer it.
+// Characters rise through baseline masks, matching the main subtitle language.
+function riseLabel(text,x,y,size,color,t,start,alpha=1){
+ if(t<start||alpha<=0)return;
+ ctx.save();ctx.font=size+'px Display';ctx.textBaseline='alphabetic';ctx.fillStyle=color;
+ const chars=Array.from(text),step=Math.min(.026,.18/Math.max(1,chars.length-1));
+ let offset=0;
+ for(let i=0;i<chars.length;i++){
+  const width=ctx.measureText(chars[i]).width+1,progress=clamp((t-start-i*step)/.28),ease=1-Math.pow(1-progress,3);
+  if(progress>0){ctx.save();ctx.globalAlpha*=alpha;ctx.beginPath();ctx.rect(x+offset,y,width+1,size*1.35);ctx.clip();ctx.fillText(chars[i],x+offset,y+size*.96+(1-ease)*size*1.35);ctx.restore();}
+  offset+=width;
+ }
+ ctx.restore();
+}
+function drawSampleMeanings(t,hush){
+ if(t>=19.15)return;
+ const b=windowPose(t),c=cameraAt(t);
+ // Label belongs to the moving observation frame, not a disconnected corner legend.
+ const preReveal=1-smooth(16.1,16.6,t);
+ riseLabel('你看到的成功者',b.x+14,b.y-68,44,'#e8c985',t,.85,preReveal*hush);
+ const focus=1-smooth(3.9,4.65,t)+smooth(7.2,8.6,t);
+ riseLabel('没被看见的失败者',140,610+(c.z-1)*120,44,'#b0bac9',t,2.15,clamp(focus)*preReveal*hush);
+ // A short first-use explanation links an abstract dot to a person.
+ riseLabel('每个点，都是一个人',140,585,40,'#c5ced9',t,.15,(1-smooth(1.75,2.05,t))*hush);
+ riseLabel('完整样本',b.x+16,b.y-59,36,'#e8c985',t,17.4,(1-smooth(18.65,19.1,t))*hush);
+}
+
+// Continue the accepted aircraft scene; the missing aircraft stays outside the sample.
+function drawAircraftReasoning(t){
+ const fade=1-smooth(40.7,CONFIG.realWorldStart,t);
+ const hx=660-149*.5,hy=650-35*.5;
+ ctx.save();ctx.globalAlpha=fade;
+ if(t<33.933333){
+  const phase=(t-27.4)*1.8,alpha=.30+.25*Math.sin(phase)**2;
+  ring(hx,hy,25+8*Math.sin(phase),alpha,'#ed8174');
+ }
+ riseLabel('Abraham Wald · 1943',260,330,36,'#c8d1dc',t,29.733333,(1-smooth(33.5,34,t)));
+ riseLabel('估计中弹后的损失风险',245,880,36,'#c8d1dc',t,30.0,(1-smooth(33.5,34,t)));
+ if(t>=33.933333){
+  const draw=smooth(33.933333,35.0,t),a=(1-smooth(39.5,40.7,t));
+  ctx.save();ctx.globalAlpha*=a;ctx.strokeStyle='#f3eee4';ctx.lineWidth=3;
+  ctx.setLineDash([490*draw,490]);ctx.beginPath();ctx.roundRect(hx-36,hy-80,72,160,18);ctx.stroke();ctx.restore();
+  riseLabel('发动机等关键部位',260,880,38,'#f3eee4',t,34.0,1-smooth(37.2,37.6,t));
+ }
+ riseLabel('还要考虑命中与损伤条件',205,880,34,'#c8d1dc',t,37.5,1-smooth(40.7,41.333333,t));
+ ctx.restore();
+}
+
+// Return to everyday claims using explicit names, one method, and two outcomes.
+// Demonstration cases are not an empirical success-rate estimate.
+function lightPoint(x,y,r,gold,alpha=1){
+ ctx.save();ctx.globalAlpha*=alpha;
+ if(gold){const glow=ctx.createRadialGradient(x,y,0,x,y,r*5);glow.addColorStop(0,'rgba(232,201,133,.35)');glow.addColorStop(1,'rgba(232,201,133,0)');ctx.fillStyle=glow;ctx.beginPath();ctx.arc(x,y,r*5,0,Math.PI*2);ctx.fill();}
+ ctx.fillStyle=gold?'#e8c985':'#a6b3c4';ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fill();ctx.restore();
+}
+function everydayPose(p,t){const k=p.gold?p.id:p.id-12;return {x:(p.gold?1190:380)+(k%4)*90+Math.sin(t*.85+p.id)*22,y:590+Math.floor(k/4)*78+Math.cos(t*.7+p.id)*17};}
+function fullPopulationPose(p,t){const q=worldSample({...p,gold:false},t),z=1-.13*smooth(70,77,t);return {x:960+(q.x-960)*z,y:800+(q.y-800)*z,r:p.gold?5.5:2.1};}
+function drawReality(t){
+ const start=CONFIG.realWorldStart,enter=smooth(start,start+1.3,t),ending=smooth(CONFIG.endingStart,70.8,t);
+ // Same positions and colours bridge the aircraft and human samples.
+ if(enter<1){ctx.save();ctx.globalAlpha=1-enter;observationWindow(30,1);drawAircraftExperiment(27.35,1-enter);ctx.restore();}
+ ctx.save();ctx.globalAlpha=enter;
+ if(ending<1){
+  const remain=1-smooth(68.35,CONFIG.endingStart,t);
+  const method=smooth(44.2,44.8,t);
+  if(method<1){for(const [label,x] of [['上岸经验',360],['创业故事',800],['爆款方法',1240]])riseLabel(label,x,345,42,'#e8c985',t,start+.25,1-method);}
+  riseLabel('同一种方法',825,315,48,'#f3eee4',t,44.5,remain);
+  // Rectangles keep the same meaning throughout: the cases included in observation.
+  const selected=smooth(51.7,52.4,t),all=smooth(58.7,60.2,t);
+  if(selected>0){
+   const x=mix(1050,220,all),w=mix(630,1480,all);
+   ctx.save();ctx.globalAlpha*=selected*remain;ctx.strokeStyle='#e8c985';ctx.lineWidth=2;ctx.strokeRect(x,440,w,430);ctx.restore();
+   riseLabel(all<.5?'你只听到的':'把两种结果一起看',x+16,389,34,'#e8c985',t,all<.5?51.7:59.45,remain);
+  }
+  riseLabel('失败者',445,475,42,'#a6b3c4',t,start+.4,remain);
+  riseLabel('成功者',1255,475,42,'#e8c985',t,start+.4,remain);
+  riseLabel('原理示意 · 数量不代表真实比例',140,965,28,'#a6b3c4',t,start+.7,remain);
+  riseLabel('起点 · 资源 · 时机',700,916,40,'#c8d1dc',t,65.4,remain);
+ }
+ for(const p of dots){
+  if(p.id>=24&&ending<=0)continue;
+  const end=fullPopulationPose(p,t),q=p.id<24?everydayPose(p,t):end;
+  const x=mix(q.x,end.x,ending),y=mix(q.y,end.y,ending),r=mix(7,end.r,ending);
+  let alpha=p.gold?1:.35;
+  if(!p.gold){alpha=mix(.25,.8,smooth(48.266667,49.4,t));alpha=mix(alpha,.28,smooth(51.7,52.4,t));alpha=mix(alpha,.78,smooth(58.7,60.2,t));}
+  if(p.id>=24)alpha=(.25+seeded(p.id+91)*.39)*ending;
+  alpha*=1-.4*smooth(75.3,78,t);
+  lightPoint(x,y,r,p.gold,alpha);
+  if(p.id<24&&ending<1){
+   const local=p.gold?p.id:p.id-12,at=(p.gold?44.8:48.266667)+local*.085;
+   const result=smooth(at,at+.35,t)*(1-ending);
+   sampleMark(x,y,p.gold,16,result*.8);
+   if(!p.gold&&t>=61.866667&&t<65.4){const a=Math.sin((t-61.866667)*1.6)**2;ring(x,y,24,a*.35*(1-ending),'#b9c6d6');}
+  }
+ }
+ if(ending>0){riseLabel('幸存者偏差',850,575,34,'#b2bdcc',t,71,1-smooth(76.8,78,t));}
+ ctx.restore();
+}
+
+const tl=gsap.timeline({paused:true});
+const clockState={t:0};
+tl.to(clockState,{t:CONFIG.duration,duration:CONFIG.duration,ease:'none',onUpdate:()=>drawParticles(clockState.t)},0);
+window.addEventListener('hf-seek',e=>drawParticles(e.detail.time));
+for(const cap of CAPTIONS){
+ const base='#'+cap.id+' .caption';
+ cap.lines.forEach((_,i)=>{
+  const el=base+' p:nth-child('+(i+1)+')',at=cap.start+(cap.lineDelays?.[i]||0);
+  const glyphs=el+' .glyph';
+  const count=Array.from(cap.lines[i]).length;
+  const step=Math.min(.045,.30/Math.max(1,count-1));
+  const duration=cap.id==='reveal'?.25:.36;
+  // A rapid cascade on the hit; a readable, softer wave elsewhere.
+  // Opening starts mid-rise on its first glyph; later glyphs remain below their masks.
+  if(cap.id==='hook'){
+   tl.fromTo(el+' .char-mask:first-child .glyph',{yPercent:45,opacity:1},{yPercent:0,opacity:1,duration:.28,ease:'power3.out',immediateRender:true},0);
+   tl.fromTo(el+' .char-mask:not(:first-child) .glyph',{yPercent:110,opacity:1},{yPercent:0,opacity:1,duration,ease:'power3.out',stagger:step,immediateRender:false},.04);
+  }else tl.fromTo(glyphs,{yPercent:110,opacity:1},{yPercent:0,opacity:1,duration,ease:'power3.out',stagger:cap.id==='reveal'?.025:step,immediateRender:false},at);
+
+ });
+ if(cap.english)tl.to(base+' .english',{opacity:1,duration:.35},cap.start+.1);
+ if(cap.end<CONFIG.duration)tl.to(base,{opacity:0,duration:.16,ease:'power2.in'},cap.end-.16);
+}
+tl.fromTo('#tag1,#tag2,#tag3',{opacity:0,y:12},{opacity:1,y:0,stagger:.17,duration:.35},4.25);
+tl.to('#tag1,#tag2,#tag3',{opacity:0,duration:.3},6.95);
+tl.fromTo('#flash',{opacity:.10},{opacity:0,duration:.24,ease:'power2.out',immediateRender:false},17);
+tl.to('#returnedLabel,#illustrationNote',{opacity:1,duration:.4},20.65);
+tl.to('#missingLabel',{opacity:1,duration:.4},26.3);
+tl.to('#returnedLabel,#missingLabel,#illustrationNote',{opacity:0,duration:.6},40.75);
+window.__timelines=window.__timelines||{};
+window.__timelines.main=tl;
+drawParticles(0);
+</script></body></html>

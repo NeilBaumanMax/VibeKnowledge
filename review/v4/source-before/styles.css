@@ -1,0 +1,33 @@
+@font-face{font-family:Display;src:url('assets/fonts/display.woff2')}@font-face{font-family:Body;src:url('assets/fonts/body.woff2')}
+:root{--bg:#07090e;--ink:#f3eee4;--gold:#e8c985;--red:#ed8174;--muted:#9da8b5}
+*{margin:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:var(--bg)}
+#root{position:relative;width:100%;height:100%;background:var(--bg);color:var(--ink);font-family:Body,sans-serif}
+#universe{position:absolute;inset:0;width:100%;height:100%}.clip{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.caption{position:absolute;left:120px;right:120px;font-family:Display,sans-serif;font-size:70px;line-height:1.4;letter-spacing:2px;opacity:1}
+.caption p{white-space:nowrap;opacity:1}.gold{color:var(--gold)}.red{color:var(--red)}
+.hook .caption{top:210px;left:128px;font-size:112px;letter-spacing:1px;right:auto}.reverse .caption{top:370px;left:130px;font-size:80px;right:auto}
+.lower .caption{top:110px;left:130px;text-align:left;font-size:60px;line-height:1.45}
+#question .caption{top:790px;text-align:center;left:120px;font-size:54px;line-height:1.35}
+#incomplete .caption{top:110px;font-size:68px}
+.top .caption{top:135px;font-size:66px;text-align:center}
+.reveal .caption{top:353px;text-align:center;font-size:150px;letter-spacing:9px;color:var(--gold)}
+.reveal .english{font-family:Body,sans-serif;font-size:30px;letter-spacing:12px;margin-top:24px;color:var(--ink);opacity:0}
+.tag{position:absolute;color:var(--gold);font:43px Display,sans-serif;letter-spacing:1px;opacity:0}
+#tag1{left:950px;top:322px}#tag2{left:1180px;top:322px}#tag3{left:1410px;top:322px}
+.scene-note{position:absolute;font:30px Body,sans-serif;color:#c1c9d5;opacity:0;letter-spacing:2px}
+#returnedLabel{left:1134px;top:351px;color:var(--gold);font-size:34px}
+#missingLabel{left:410px;top:792px;font-size:34px}
+#illustrationNote{left:1134px;top:900px;font-size:28px;color:#a9b4c4}
+#experimentHint{left:430px;top:925px;font-size:28px;color:#a9b4c4}
+#flash{position:absolute;inset:0;background:#e8c985;opacity:0;pointer-events:none}
+/* Review fixes: reserve negative space around reading text. */
+.muted{color:#a5b0c0}
+#question .caption{top:130px;text-align:left;left:130px;font-size:64px;line-height:1.42}
+.reveal .caption{top:155px}
+#missingLabel{top:760px}
+
+#tag1{left:860px}#tag2{left:1130px}#tag3{left:1450px}
+
+/* Every character rises behind its own baseline mask. */
+.char-mask{display:inline-block;overflow:hidden;vertical-align:bottom;height:1.4em;line-height:1.4em}
+.glyph{display:inline-block;will-change:transform;opacity:0}

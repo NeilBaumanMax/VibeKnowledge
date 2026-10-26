@@ -1,0 +1,908 @@
+{
+  "project": "film",
+  "runtime": "all",
+  "compositions": [
+    {
+      "composition": "index.html",
+      "source": "index.html",
+      "tweens": [
+        {
+          "id": "proxy (unresolved DOM association)-to-0-other",
+          "target": "proxy (unresolved DOM association)",
+          "method": "to",
+          "group": "other",
+          "start": 0,
+          "duration": 30,
+          "end": 30,
+          "totalDuration": 30,
+          "position": 0,
+          "ease": "none",
+          "unresolved": [
+            "endpointProperties"
+          ],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 0,
+              "properties": {}
+            },
+            {
+              "pct": 100,
+              "time": 30,
+              "properties": {
+                "t": 30
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "# .caption-set-0",
+          "target": "# .caption",
+          "method": "set",
+          "start": 0,
+          "duration": 0,
+          "end": 0,
+          "totalDuration": 0,
+          "position": 0,
+          "unresolved": [],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 100,
+              "time": 0,
+              "properties": {
+                "opacity": 1,
+                "y": 0
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "# .caption-set-__raw:cap.start-visual",
+          "target": "# .caption",
+          "method": "set",
+          "group": "visual",
+          "start": null,
+          "duration": 0,
+          "end": null,
+          "totalDuration": 0,
+          "position": "__raw:cap.start",
+          "unresolved": [
+            "start"
+          ],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 100,
+              "time": null,
+              "properties": {
+                "opacity": 1
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "# .caption-fromTo-__raw:cap.start-scale",
+          "target": "# .caption",
+          "method": "fromTo",
+          "group": "scale",
+          "start": null,
+          "duration": 0.27,
+          "end": null,
+          "totalDuration": 0.27,
+          "position": "__raw:cap.start",
+          "ease": "power4.out",
+          "unresolved": [
+            "start"
+          ],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": null,
+              "properties": {
+                "scale": 1.12
+              }
+            },
+            {
+              "pct": 100,
+              "time": null,
+              "properties": {
+                "scale": 1
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "# .caption-fromTo-__raw:cap.start",
+          "target": "# .caption",
+          "method": "fromTo",
+          "start": null,
+          "duration": 0.24,
+          "end": null,
+          "totalDuration": 0.24,
+          "position": "__raw:cap.start",
+          "ease": "power3.out",
+          "unresolved": [
+            "start"
+          ],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": null,
+              "properties": {
+                "opacity": 0,
+                "y": 22
+              }
+            },
+            {
+              "pct": 100,
+              "time": null,
+              "properties": {
+                "opacity": 1,
+                "y": 0
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "# .caption-to-__raw:cap.end-.14",
+          "target": "# .caption",
+          "method": "to",
+          "start": null,
+          "duration": 0.14,
+          "end": null,
+          "totalDuration": 0.14,
+          "position": "__raw:cap.end-.14",
+          "ease": "power2.in",
+          "unresolved": [
+            "start"
+          ],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": null,
+              "properties": {
+                "opacity": 1,
+                "y": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": null,
+              "properties": {
+                "opacity": 0,
+                "y": -10
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "#progressInner-fromTo-0-scale",
+          "target": "#progressInner",
+          "method": "fromTo",
+          "group": "scale",
+          "start": 0,
+          "duration": 30,
+          "end": 30,
+          "totalDuration": 30,
+          "position": 0,
+          "ease": "none",
+          "unresolved": [],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 0,
+              "properties": {
+                "scaleX": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 30,
+              "properties": {
+                "scaleX": 1
+              }
+            }
+          ],
+          "path": null,
+          "composedWith": [
+            {
+              "selector": "#brand,#series,#footer,#progress",
+              "summary": "opacity 0.1..1"
+            }
+          ]
+        },
+        {
+          "id": "#tag1,#tag2,#tag3-fromTo-4040",
+          "target": "#tag1,#tag2,#tag3",
+          "method": "fromTo",
+          "start": 4.04,
+          "duration": 0.35,
+          "end": 4.61,
+          "totalDuration": 0.57,
+          "position": 4.04,
+          "ease": "power3.out",
+          "unresolved": [],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 4.04,
+              "properties": {
+                "opacity": 0,
+                "y": 18
+              }
+            },
+            {
+              "pct": 100,
+              "time": 4.39,
+              "properties": {
+                "opacity": 1,
+                "y": 0
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "#tag1,#tag2,#tag3-to-5850",
+          "target": "#tag1,#tag2,#tag3",
+          "method": "to",
+          "start": 5.85,
+          "duration": 0.3,
+          "end": 6.25,
+          "totalDuration": 0.4,
+          "position": 5.85,
+          "unresolved": [],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 5.85,
+              "properties": {
+                "opacity": 1,
+                "y": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 6.15,
+              "properties": {
+                "opacity": 0,
+                "y": -12
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "#methodLabel-to-8100-visual",
+          "target": "#methodLabel",
+          "method": "to",
+          "group": "visual",
+          "start": 8.1,
+          "duration": 0.4,
+          "end": 8.5,
+          "totalDuration": 0.4,
+          "position": 8.1,
+          "unresolved": [
+            "endpointProperties"
+          ],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 8.1,
+              "properties": {}
+            },
+            {
+              "pct": 100,
+              "time": 8.5,
+              "properties": {
+                "opacity": 1
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "#successLabel-to-8500-visual",
+          "target": "#successLabel",
+          "method": "to",
+          "group": "visual",
+          "start": 8.5,
+          "duration": 0.4,
+          "end": 8.9,
+          "totalDuration": 0.4,
+          "position": 8.5,
+          "unresolved": [
+            "endpointProperties"
+          ],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 8.5,
+              "properties": {}
+            },
+            {
+              "pct": 100,
+              "time": 8.9,
+              "properties": {
+                "opacity": 1
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "#failureLabel-to-10100-visual",
+          "target": "#failureLabel",
+          "method": "to",
+          "group": "visual",
+          "start": 10.1,
+          "duration": 0.4,
+          "end": 10.5,
+          "totalDuration": 0.4,
+          "position": 10.1,
+          "unresolved": [
+            "endpointProperties"
+          ],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 10.1,
+              "properties": {}
+            },
+            {
+              "pct": 100,
+              "time": 10.5,
+              "properties": {
+                "opacity": 1
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "#methodLabel,#successLabel,#failureLabel-to-11800-visual",
+          "target": "#methodLabel,#successLabel,#failureLabel",
+          "method": "to",
+          "group": "visual",
+          "start": 11.8,
+          "duration": 0.4,
+          "end": 12.2,
+          "totalDuration": 0.4,
+          "position": 11.8,
+          "unresolved": [
+            "endpointProperties"
+          ],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 11.8,
+              "properties": {}
+            },
+            {
+              "pct": 100,
+              "time": 12.2,
+              "properties": {
+                "opacity": 0
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "#selectionBox-fromTo-12000",
+          "target": "#selectionBox",
+          "method": "fromTo",
+          "start": 12,
+          "duration": 0.8,
+          "end": 12.8,
+          "totalDuration": 0.8,
+          "position": 12,
+          "ease": "power3.inOut",
+          "unresolved": [],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 12,
+              "properties": {
+                "opacity": 0,
+                "scale": 1.3
+              }
+            },
+            {
+              "pct": 100,
+              "time": 12.8,
+              "properties": {
+                "opacity": 1,
+                "scale": 1
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "#selectionLabel-to-12400-visual",
+          "target": "#selectionLabel",
+          "method": "to",
+          "group": "visual",
+          "start": 12.4,
+          "duration": 0.3,
+          "end": 12.7,
+          "totalDuration": 0.3,
+          "position": 12.4,
+          "unresolved": [
+            "endpointProperties"
+          ],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 12.4,
+              "properties": {}
+            },
+            {
+              "pct": 100,
+              "time": 12.7,
+              "properties": {
+                "opacity": 1
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "#selectionBox,#selectionLabel-to-15900-visual",
+          "target": "#selectionBox,#selectionLabel",
+          "method": "to",
+          "group": "visual",
+          "start": 15.9,
+          "duration": 0.45,
+          "end": 16.35,
+          "totalDuration": 0.45,
+          "position": 15.9,
+          "unresolved": [
+            "endpointProperties"
+          ],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 15.9,
+              "properties": {}
+            },
+            {
+              "pct": 100,
+              "time": 16.35,
+              "properties": {
+                "opacity": 0
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "#brand,#series,#footer,#progress-to-16030-visual",
+          "target": "#brand,#series,#footer,#progress",
+          "method": "to",
+          "group": "visual",
+          "start": 16.03,
+          "duration": 0.5,
+          "end": 16.53,
+          "totalDuration": 0.5,
+          "position": 16.03,
+          "unresolved": [
+            "endpointProperties"
+          ],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 16.03,
+              "properties": {}
+            },
+            {
+              "pct": 100,
+              "time": 16.53,
+              "properties": {
+                "opacity": 0.1
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "#brand,#series,#footer,#progress-to-17200-visual",
+          "target": "#brand,#series,#footer,#progress",
+          "method": "to",
+          "group": "visual",
+          "start": 17.2,
+          "duration": 0.35,
+          "end": 17.55,
+          "totalDuration": 0.35,
+          "position": 17.2,
+          "unresolved": [],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 17.2,
+              "properties": {
+                "opacity": 0.1
+              }
+            },
+            {
+              "pct": 100,
+              "time": 17.55,
+              "properties": {
+                "opacity": 1
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "#flash-fromTo-17000-visual",
+          "target": "#flash",
+          "method": "fromTo",
+          "group": "visual",
+          "start": 17,
+          "duration": 0.26,
+          "end": 17.26,
+          "totalDuration": 0.26,
+          "position": 17,
+          "ease": "power2.out",
+          "unresolved": [],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 17,
+              "properties": {
+                "opacity": 0.19
+              }
+            },
+            {
+              "pct": 100,
+              "time": 17.26,
+              "properties": {
+                "opacity": 0
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "#planePanel-fromTo-21150-visual",
+          "target": "#planePanel",
+          "method": "fromTo",
+          "group": "visual",
+          "start": 21.15,
+          "duration": 0.8,
+          "end": 21.95,
+          "totalDuration": 0.8,
+          "position": 21.15,
+          "unresolved": [],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 21.15,
+              "properties": {
+                "opacity": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 21.95,
+              "properties": {
+                "opacity": 1
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "#airframe-fromTo-21000",
+          "target": "#airframe",
+          "method": "fromTo",
+          "start": 21,
+          "duration": 1.65,
+          "end": 22.65,
+          "totalDuration": 1.65,
+          "position": 21,
+          "ease": "power3.out",
+          "unresolved": [],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 21,
+              "properties": {
+                "y": 60,
+                "scale": 0.84,
+                "rotation": -7
+              }
+            },
+            {
+              "pct": 100,
+              "time": 22.65,
+              "properties": {
+                "y": 0,
+                "scale": 1,
+                "rotation": 0
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "__unresolved__-to-__raw:start-visual",
+          "target": "__unresolved__",
+          "method": "to",
+          "group": "visual",
+          "start": null,
+          "duration": 0.19,
+          "end": null,
+          "totalDuration": 0.19,
+          "position": "__raw:start",
+          "unresolved": [
+            "start",
+            "target",
+            "endpointProperties"
+          ],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": null,
+              "properties": {}
+            },
+            {
+              "pct": 100,
+              "time": null,
+              "properties": {
+                "opacity": 1
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "#armor-to-25430-visual",
+          "target": "#armor",
+          "method": "to",
+          "group": "visual",
+          "start": 25.43,
+          "duration": 0.45,
+          "end": 25.88,
+          "totalDuration": 0.45,
+          "position": 25.43,
+          "unresolved": [
+            "endpointProperties"
+          ],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 25.43,
+              "properties": {}
+            },
+            {
+              "pct": 100,
+              "time": 25.88,
+              "properties": {
+                "opacity": 1
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "#armor-to-27450-visual",
+          "target": "#armor",
+          "method": "to",
+          "group": "visual",
+          "start": 27.45,
+          "duration": 0.3,
+          "end": 27.75,
+          "totalDuration": 0.3,
+          "position": 27.45,
+          "unresolved": [],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 27.45,
+              "properties": {
+                "opacity": 1
+              }
+            },
+            {
+              "pct": 100,
+              "time": 27.75,
+              "properties": {
+                "opacity": 0
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "#critical-to-27480-visual",
+          "target": "#critical",
+          "method": "to",
+          "group": "visual",
+          "start": 27.48,
+          "duration": 0.45,
+          "end": 27.93,
+          "totalDuration": 0.45,
+          "position": 27.48,
+          "unresolved": [
+            "endpointProperties"
+          ],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 27.48,
+              "properties": {}
+            },
+            {
+              "pct": 100,
+              "time": 27.93,
+              "properties": {
+                "opacity": 1
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "#zoneLabel-to-27580",
+          "target": "#zoneLabel",
+          "method": "to",
+          "start": 27.58,
+          "duration": 0.4,
+          "end": 27.98,
+          "totalDuration": 0.4,
+          "position": 27.58,
+          "unresolved": [
+            "endpointProperties"
+          ],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 27.58,
+              "properties": {}
+            },
+            {
+              "pct": 100,
+              "time": 27.98,
+              "properties": {
+                "opacity": 1,
+                "y": -6
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "#missingCaption-to-28300-visual",
+          "target": "#missingCaption",
+          "method": "to",
+          "group": "visual",
+          "start": 28.3,
+          "duration": 0.4,
+          "end": 28.7,
+          "totalDuration": 0.4,
+          "position": 28.3,
+          "unresolved": [
+            "endpointProperties"
+          ],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 28.3,
+              "properties": {}
+            },
+            {
+              "pct": 100,
+              "time": 28.7,
+              "properties": {
+                "opacity": 1
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "#airframe-to-27800-scale",
+          "target": "#airframe",
+          "method": "to",
+          "group": "scale",
+          "start": 27.8,
+          "duration": 2.2,
+          "end": 30,
+          "totalDuration": 2.2,
+          "position": 27.8,
+          "ease": "sine.inOut",
+          "unresolved": [],
+          "keyframeBasis": "tween-endpoints",
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 27.8,
+              "properties": {
+                "scale": 1
+              }
+            },
+            {
+              "pct": 100,
+              "time": 30,
+              "properties": {
+                "scale": 1.025
+              }
+            }
+          ],
+          "path": null
+        }
+      ],
+      "traces": [],
+      "cssKeyframes": [],
+      "anime": []
+    }
+  ],
+  "_meta": {
+    "version": "0.8.186",
+    "latestVersion": "0.8.186",
+    "updateAvailable": false
+  }
+}

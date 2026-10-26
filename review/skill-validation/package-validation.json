@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-26",
+  "skill_frontmatter": "quick_validate passed",
+  "approval_regression_tests": {
+    "passed": 9,
+    "failed": 0
+  },
+  "integration_tests": 11,
+  "local_reference_links": "all existing",
+  "music_sha256": "4223d2706afcada65b5b51c2b7c0ed276c77ba908fc5e31daadc63072ed1ce92",
+  "music_bytes": 20363166,
+  "bgm_in_git_index": true,
+  "files_at_validation": 693,
+  "files_exceed_100MiB": [],
+  "installation_caches_excluded": true
+}

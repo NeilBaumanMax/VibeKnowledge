@@ -1,0 +1,34 @@
+{
+  "ok": true,
+  "outputDir": "/Users/neil/Documents/Project/Vibe_Knowledge/review/v2/reveal-proof",
+  "frames": [
+    {
+      "path": "/Users/neil/Documents/Project/Vibe_Knowledge/review/v2/reveal-proof/frame-00-at-17.05s.png",
+      "time": 17.05
+    },
+    {
+      "path": "/Users/neil/Documents/Project/Vibe_Knowledge/review/v2/reveal-proof/frame-01-at-17.2s.png",
+      "time": 17.2
+    },
+    {
+      "path": "/Users/neil/Documents/Project/Vibe_Knowledge/review/v2/reveal-proof/frame-02-at-17.5s.png",
+      "time": 17.5
+    },
+    {
+      "path": "/Users/neil/Documents/Project/Vibe_Knowledge/review/v2/reveal-proof/frame-03-at-18.7s.png",
+      "time": 18.7
+    },
+    {
+      "path": "/Users/neil/Documents/Project/Vibe_Knowledge/review/v2/reveal-proof/frame-04-at-29.1s.png",
+      "time": 29.1
+    }
+  ],
+  "contactSheets": [
+    "/Users/neil/Documents/Project/Vibe_Knowledge/review/v2/reveal-proof/contact-sheet.jpg"
+  ],
+  "_meta": {
+    "version": "0.8.186",
+    "latestVersion": "0.8.186",
+    "updateAvailable": false
+  }
+}

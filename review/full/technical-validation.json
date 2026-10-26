@@ -1,0 +1,177 @@
+{
+  "passed": true,
+  "duration": 78.0,
+  "width": 1920,
+  "height": 1080,
+  "frames": 2340,
+  "fps": "30/1",
+  "video_codec": "h264",
+  "pixel_format": "yuv420p",
+  "audio_codec": "aac",
+  "audio_channels": 2,
+  "audio_sample_rate": "48000",
+  "size_bytes": 28432787,
+  "full_decode": "pass",
+  "sampled_frames": [
+    {
+      "time": 0,
+      "mean": 22.186562821502058,
+      "bright_pixels": 4862
+    },
+    {
+      "time": 1.6,
+      "mean": 27.238651298868312,
+      "bright_pixels": 53342
+    },
+    {
+      "time": 2.8,
+      "mean": 29.667468010545267,
+      "bright_pixels": 80323
+    },
+    {
+      "time": 5.5,
+      "mean": 26.522211130401235,
+      "bright_pixels": 48047
+    },
+    {
+      "time": 7.6,
+      "mean": 24.949894386574073,
+      "bright_pixels": 25832
+    },
+    {
+      "time": 9.5,
+      "mean": 25.677577803497943,
+      "bright_pixels": 43802
+    },
+    {
+      "time": 12.5,
+      "mean": 24.667844167952676,
+      "bright_pixels": 35351
+    },
+    {
+      "time": 14.8,
+      "mean": 24.511110468106995,
+      "bright_pixels": 34557
+    },
+    {
+      "time": 16.6,
+      "mean": 10.201551408179013,
+      "bright_pixels": 0
+    },
+    {
+      "time": 17,
+      "mean": 25.64615338863169,
+      "bright_pixels": 0
+    },
+    {
+      "time": 17.5,
+      "mean": 26.93160284850823,
+      "bright_pixels": 60711
+    },
+    {
+      "time": 20,
+      "mean": 23.049421296296295,
+      "bright_pixels": 22545
+    },
+    {
+      "time": 22,
+      "mean": 23.579785075874486,
+      "bright_pixels": 28088
+    },
+    {
+      "time": 24.6,
+      "mean": 23.531611207561728,
+      "bright_pixels": 27426
+    },
+    {
+      "time": 25.2,
+      "mean": 23.830214441872428,
+      "bright_pixels": 29513
+    },
+    {
+      "time": 26.8,
+      "mean": 24.885892489711935,
+      "bright_pixels": 39851
+    },
+    {
+      "time": 28.4,
+      "mean": 24.064437692901233,
+      "bright_pixels": 31969
+    },
+    {
+      "time": 31.5,
+      "mean": 25.958376093106995,
+      "bright_pixels": 51308
+    },
+    {
+      "time": 35.5,
+      "mean": 25.383761895576132,
+      "bright_pixels": 44626
+    },
+    {
+      "time": 39,
+      "mean": 25.046919045781895,
+      "bright_pixels": 41981
+    },
+    {
+      "time": 42.5,
+      "mean": 25.313638599537036,
+      "bright_pixels": 46529
+    },
+    {
+      "time": 46,
+      "mean": 24.044421296296296,
+      "bright_pixels": 31591
+    },
+    {
+      "time": 50,
+      "mean": 24.78125771604938,
+      "bright_pixels": 37875
+    },
+    {
+      "time": 54,
+      "mean": 25.616397730195473,
+      "bright_pixels": 46189
+    },
+    {
+      "time": 57,
+      "mean": 24.77423225308642,
+      "bright_pixels": 38219
+    },
+    {
+      "time": 60.5,
+      "mean": 26.285047582304525,
+      "bright_pixels": 54475
+    },
+    {
+      "time": 64,
+      "mean": 26.06998794367284,
+      "bright_pixels": 52671
+    },
+    {
+      "time": 67,
+      "mean": 26.429001575360083,
+      "bright_pixels": 56967
+    },
+    {
+      "time": 70,
+      "mean": 24.772894000771604,
+      "bright_pixels": 25236
+    },
+    {
+      "time": 73.5,
+      "mean": 27.11601160622428,
+      "bright_pixels": 63827
+    },
+    {
+      "time": 76,
+      "mean": 27.049871238425926,
+      "bright_pixels": 63707
+    },
+    {
+      "time": 77.96666666666667,
+      "mean": 26.511714088220163,
+      "bright_pixels": 60188
+    }
+  ]
+}

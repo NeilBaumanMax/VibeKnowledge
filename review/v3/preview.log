@@ -1,0 +1,15 @@
+┌  hyperframes preview
+
+  Project   film
+  Studio    http://localhost:3002/#project/film
+  Server    http://localhost:3002
+  Desktop   Keep editing by chatting with Framey in the HyperFrames desktop app → https://hyperframes.dev/studio/download
+
+  Reusing the background server already running for this project.
+  Changes reload automatically in the studio.
+
+  Stop with: hyperframes preview "/Users/neil/Documents/Project/Vibe_Knowledge/film" --stop
+
+
+  Lint: 0 error(s), 12 warning(s) — see the Lint badge in Studio, or run `hyperframes lint` for full output.
+

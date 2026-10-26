@@ -1,0 +1,11 @@
+{
+  "film/src/semantics.js": "26d32d4a034c4dfad99d3ad9e5d2c1b3c536c3d89056ccac9d566e6901ff48e8",
+  "film/src/styles.css": "1df340ca987c7ada79f6805a6e82a6c2ab8f9fa4a376d3d9e9ee1b449acff0a7",
+  "film/src/captions.json": "8240459f246ba064acece9b7c21a1135be4b3996ae07dcd7303ecb6bfec27df7",
+  "film/src/timeline.js": "a873f3a3fc5d3cd91f9ac260ccf1686ac16338244428c038e88dea2028ac0589",
+  "film/src/particles.js": "26bc09ec72151ed8fbadfe76c2ed9678a8588aff273e62b34cccdef94cd552bd",
+  "film/src/aircraft.js": "2e398330eca7f8e0e48e77a35fe9faa7bebb156399fd278d3c62ff24ea023004",
+  "film/index.html": "c26c5f30bf638f8e32c75369d8afbc3aa8a08fd7e3de484c901dc99d13ab169a",
+  "tools/build.mjs": "26f5dbfc869e5d52f95ed944d872267fe33952bd03e36e41b4c5a0a828c321a3",
+  "film/assets/audio/score.wav": "661a0da0b4c5dd2b0e0e16433a2ef62251ba9a1cadb12c37392088f8363987a2"
+}

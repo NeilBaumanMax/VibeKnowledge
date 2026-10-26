@@ -1,0 +1,227 @@
+{
+  "geometry": {
+    "total": 420,
+    "success": 12,
+    "failure": 408,
+    "stages": [
+      {
+        "time": 0,
+        "visibleFailures": 408,
+        "selectedSuccesses": 12,
+        "selectedFailures": 0,
+        "box": {
+          "x": 1055,
+          "y": 406,
+          "w": 475,
+          "h": 233
+        }
+      },
+      {
+        "time": 1.6,
+        "visibleFailures": 374,
+        "selectedSuccesses": 12,
+        "selectedFailures": 0,
+        "box": {
+          "x": 954.3,
+          "y": 370.28,
+          "w": 655.5,
+          "h": 321.53999999999996
+        }
+      },
+      {
+        "time": 3.2,
+        "visibleFailures": 408,
+        "selectedSuccesses": 12,
+        "selectedFailures": 0,
+        "box": {
+          "x": 1055,
+          "y": 406,
+          "w": 474.99999999999994,
+          "h": 232.99999999999997
+        }
+      },
+      {
+        "time": 5.5,
+        "visibleFailures": 125,
+        "selectedSuccesses": 12,
+        "selectedFailures": 0,
+        "box": {
+          "x": 763.5,
+          "y": 302.6,
+          "w": 997.5,
+          "h": 489.3
+        }
+      },
+      {
+        "time": 7.3,
+        "visibleFailures": 138,
+        "selectedSuccesses": 12,
+        "selectedFailures": 0,
+        "box": {
+          "x": 780.2989293764086,
+          "y": 308.5588655146506,
+          "w": 967.3887114951166,
+          "h": 474.5296205860256
+        }
+      },
+      {
+        "time": 9.5,
+        "visibleFailures": 408,
+        "selectedSuccesses": 12,
+        "selectedFailures": 0,
+        "box": {
+          "x": 1094.75,
+          "y": 420.1,
+          "w": 403.75000000000006,
+          "h": 198.05
+        }
+      },
+      {
+        "time": 12.5,
+        "visibleFailures": 408,
+        "selectedSuccesses": 12,
+        "selectedFailures": 0,
+        "box": {
+          "x": 1094.75,
+          "y": 420.1,
+          "w": 403.75000000000006,
+          "h": 198.05
+        }
+      },
+      {
+        "time": 14.8,
+        "visibleFailures": 408,
+        "selectedSuccesses": 12,
+        "selectedFailures": 0,
+        "box": {
+          "x": 1094.75,
+          "y": 420.1,
+          "w": 403.75000000000006,
+          "h": 198.05
+        }
+      },
+      {
+        "time": 17.5,
+        "visibleFailures": 408,
+        "selectedSuccesses": 12,
+        "selectedFailures": 408,
+        "box": {
+          "x": 200,
+          "y": 490,
+          "w": 1520,
+          "h": 530
+        }
+      }
+    ]
+  },
+  "reading": [
+    {
+      "id": "hook",
+      "line": "你看到的成功",
+      "start": 0,
+      "end": 4,
+      "readableSeconds": 3.64,
+      "characters": 6
+    },
+    {
+      "id": "reverse",
+      "line": "其实筛掉了无数失败",
+      "start": 2,
+      "end": 4,
+      "readableSeconds": 1.64,
+      "characters": 9
+    },
+    {
+      "id": "question",
+      "line": "为什么成功经验",
+      "start": 4,
+      "end": 7.3,
+      "readableSeconds": 2.94,
+      "characters": 7
+    },
+    {
+      "id": "question",
+      "line": "常常会误导你？",
+      "start": 4.4,
+      "end": 7.3,
+      "readableSeconds": 2.54,
+      "characters": 6
+    },
+    {
+      "id": "incomplete",
+      "line": "因为你看到的……",
+      "start": 7.3,
+      "end": 11.3,
+      "readableSeconds": 3.64,
+      "characters": 6
+    },
+    {
+      "id": "incomplete",
+      "line": "从来不是全部",
+      "start": 9,
+      "end": 11.3,
+      "readableSeconds": 1.94,
+      "characters": 6
+    },
+    {
+      "id": "method",
+      "line": "同样尝试，也有人失败",
+      "start": 11.3,
+      "end": 13.7,
+      "readableSeconds": 2.04,
+      "characters": 9
+    },
+    {
+      "id": "inference",
+      "line": "但你只听到了成功",
+      "start": 13.7,
+      "end": 16.2,
+      "readableSeconds": 2.14,
+      "characters": 8
+    },
+    {
+      "id": "reveal",
+      "line": "幸存者偏差",
+      "start": 17,
+      "end": 19.5,
+      "readableSeconds": 2.14,
+      "characters": 5
+    },
+    {
+      "id": "aircraft",
+      "line": "二战：只统计返航飞机",
+      "start": 19.5,
+      "end": 22.3,
+      "readableSeconds": 2.44,
+      "characters": 9
+    },
+    {
+      "id": "wrong",
+      "line": "弹孔多，就先加固？",
+      "start": 22.3,
+      "end": 24.8,
+      "readableSeconds": 2.14,
+      "characters": 7
+    },
+    {
+      "id": "consequence",
+      "line": "关键部位中弹，可能难以返航",
+      "start": 24.95,
+      "end": 27.4,
+      "readableSeconds": 2.09,
+      "characters": 12
+    },
+    {
+      "id": "conclusion",
+      "line": "只看幸存者，就漏掉了全貌",
+      "start": 27.4,
+      "end": 30,
+      "readableSeconds": 2.24,
+      "characters": 11
+    }
+  ],
+  "cornerElementsRemoved": true,
+  "revealAt17": true,
+  "stagedConfirmation": true,
+  "captionCount": 11
+}

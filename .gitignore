@@ -1,0 +1,18 @@
+.DS_Store
+**/.DS_Store
+.venv/
+**/node_modules/
+**/__pycache__/
+*.py[cod]
+film/.hyperframes/
+review/tmp/
+review/render-cache/
+review/skill-validation/tmp/
+review/skill-validation/integration/
+tools/ffprobe-arm.zip
+tools/ffprobe-native/__MACOSX/
+.env
+.env.*
+!.env.example
+# Keep source music, generated scores, output videos, review frames and documents.
+# In particular, skil/VibeKnowledge/assets/audio/*.ogg must be committed as bytes.
